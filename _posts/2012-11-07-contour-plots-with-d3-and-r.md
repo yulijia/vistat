@@ -185,7 +185,7 @@ var svg = d3.select("#volcano").append("svg")
     .enter().append("svg:path")
       .attr("d", line)
       .on("mouseover", function(d, i) {
-        d3.select(this).style("stroke", "red");
+        d3.select(this).style("stroke", "yellow");
       })
       .on("mouseout", function(d, i) {
         d3.select(this).style("stroke", "darkgreen");
@@ -198,7 +198,7 @@ var svg = d3.select("#volcano").append("svg")
       .style("stroke-width", 2);
 </script>
 
-This is indeed a plot drawn by D3; if you do not believe it, mouse over the lines and you will see them highlighted in red, or refresh this page to see line width transition from 0 to 2.
+This is indeed a plot drawn by D3; if you do not believe it, mouse over the lines and you will see them highlighted in yellow, or refresh this page to see line width transition from 0 to 2.
 
 With R, it is just one line of code but it is a static plot (not interactive):
 
