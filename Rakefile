@@ -112,7 +112,7 @@ task :unmount do
 end # task :unmount
 
 # Usage: rake knit
-desc "Knit all Rmd files"
+desc "Knit all Rmd files for the server"
 task :knit do
   system "find ./_source -type f -iname *.Rmd | xargs -n1 -P4 ./_bin/knit"
 end # task :knit
