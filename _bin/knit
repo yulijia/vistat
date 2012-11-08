@@ -4,10 +4,9 @@ library(knitr)
 stopifnot('_source' %in% list.files()) # run me from the root directory
 render_jekyll()
 
-opts_chunk$set(r.width = TRUE, pars = list(mar = c(4, 4, .1, .1), mgp = c(2, 1, 0), bg = 'white'))
-knit_hooks$set(r.width = function(before, options, envir) {
-  if (before) options(width = 60) else opts_chunk$set(r.width = NULL)
-}, pars = function(before, options, envir) {
+opts_chunk$set(r.width = quote(options(width = 65)),
+               pars = list(mar = c(4, 4, .1, .1), mgp = c(2, 1, 0), bg = 'white'))
+knit_hooks$set(pars = function(before, options, envir) {
   if (before) do.call(par, options$pars)
 }, rgl = hook_rgl, crop = hook_pdfcrop)
 
