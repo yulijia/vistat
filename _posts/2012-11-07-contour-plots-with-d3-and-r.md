@@ -63,8 +63,7 @@ xy = paste(unlist(lapply(res, function(z) {
     ys = paste(round(z$y, 3), collapse = ",")
     sprintf("{\n  \"x\": [%s],\n  \"y\": [%s]\n}", xs, ys)
 })), collapse = ", \n")
-cat("<script>", sprintf("var data = [%s]", xy), "</script>", 
-    sep = "\n")
+cat("<script>", sprintf("var data = [%s]", xy), "</script>", sep = "\n")
 {% endhighlight %}
 
 <script>
@@ -194,7 +193,7 @@ var svg = d3.select("#volcano").append("svg")
       .style("stroke", "darkgreen")
       .style("stroke-width", 0)
       .transition()
-      .duration(3000)
+      .duration(10000)
       .style("stroke-width", 2);
 </script>
 

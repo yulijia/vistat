@@ -89,29 +89,6 @@ We can use the color of hexagons to denote the number of points in them:
 
 {% highlight r %}
 library(hexbin)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Loading required package: methods
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Loading required package: grid
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Loading required package: lattice
-{% endhighlight %}
-
-
-
-{% highlight r %}
 with(x, plot(hexbin(V1, V2)))
 {% endhighlight %}
 
@@ -152,9 +129,8 @@ Run the code below to see the surface rotating automatically if you are interest
 {% highlight r %}
 # animation
 M = par3d("userMatrix")
-play3d(par3dinterp(userMatrix = list(M, rotate3d(M, pi/2, 1, 
-    0, 0), rotate3d(M, pi/2, 0, 1, 0), rotate3d(M, pi, 0, 0, 
-    1))), duration = 20)
+play3d(par3dinterp(userMatrix = list(M, rotate3d(M, pi/2, 1, 0, 0), 
+    rotate3d(M, pi/2, 0, 1, 0), rotate3d(M, pi, 0, 0, 1))), duration = 20)
 {% endhighlight %}
 
 
