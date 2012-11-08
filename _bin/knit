@@ -13,17 +13,18 @@ knit_hooks$set(pars = function(before, options, envir) {
 local({
   f = commandArgs(TRUE)
   base = sub('\\.[Rr]md$', '', basename(f))
+  setwd('_figures/')
   # each source file corresponds to a separate fig.path and cache.path
   opts_chunk$set(fig.path = paste(base, '', sep = '/'), cache = TRUE,
-                 cache.path = paste('_cache', base, '', sep = '/'))
+                 cache.path = paste('../_cache', base, '', sep = '/'))
   # add root.url to images
   opts_knit$set(base.url = 'http://animation.r-forge.r-project.org/vistat/',
-                base.dir = paste(getwd(), '/_figures/', sep = ''),
                 animation.fun = hook_scianimator)
   # if not called from `rake knit`
   if (!grepl('^\\./_source/', f)) {
-    opts_chunk$set(fig.path = 'figures/', cache.path = 'cache/')
-    opts_knit$set(base.url = '/', base.dir = NULL)
+    setwd('../figures/')
+    opts_chunk$set(cache.path = paste('../cache', base, '', sep = '/'))
+    opts_knit$set(base.url = '/figures/')
   }
-  knit(f, paste('_posts/', base, '.md', sep = ''), envir = globalenv())
+  knit(file.path('..', f), paste('../_posts/', base, '.md', sep = ''), envir = globalenv())
 })
