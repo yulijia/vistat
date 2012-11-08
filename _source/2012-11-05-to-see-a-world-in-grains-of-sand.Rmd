@@ -64,7 +64,7 @@ plot(x[sample(nrow(x), 1000), ])
 
 We can use the color of hexagons to denote the number of points in them:
 
-```{r plot-hexbin, crop=TRUE}
+```{r plot-hexbin, crop=TRUE, message=FALSE}
 library(hexbin)
 with(x, plot(hexbin(V1, V2)))
 ```
