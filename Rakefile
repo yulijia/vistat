@@ -117,6 +117,12 @@ task :knit do
   system "find ./_source -type f -iname *.Rmd | xargs -n1 -P4 ./_bin/knit"
 end # task :knit
 
+# Usage: rake neat
+desc "Knit all Rmd files locally"
+task :neat do
+  system "find _source -type f -iname *.Rmd | xargs -n1 -P4 ./_bin/knit"
+end # task :neat
+
 desc "Install dependencies"
 task :deps do
   system "./_bin/deps"
