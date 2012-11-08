@@ -1,0 +1,30 @@
+#!/usr/bin/env Rscript
+
+library(knitr)
+stopifnot('_source' %in% list.files()) # run me from the root directory
+render_jekyll()
+
+opts_chunk$set(r.width = TRUE, pars = list(mar = c(4, 4, .1, .1), mgp = c(2, 1, 0), bg = 'white'))
+knit_hooks$set(r.width = function(before, options, envir) {
+  if (before) options(width = 60) else opts_chunk$set(r.width = NULL)
+}, pars = function(before, options, envir) {
+  if (before) do.call(par, options$pars)
+}, rgl = hook_rgl, crop = hook_pdfcrop)
+
+local({
+  f = commandArgs(TRUE)
+  base = sub('\\.[Rr]md$', '', basename(f))
+  # each source file corresponds to a separate fig.path and cache.path
+  opts_chunk$set(fig.path = paste(base, '', sep = '/'), cache = TRUE,
+                 cache.path = paste('_cache', base, '', sep = '/'))
+  # add root.url to images
+  opts_knit$set(base.url = 'http://animation.r-forge.r-project.org/vistat/',
+                base.dir = paste(getwd(), '/_figures/', sep = ''),
+                animation.fun = hook_scianimator)
+  # if not called from `rake knit`
+  if (!grepl('^\\./_source/', f)) {
+    opts_chunk$set(fig.path = 'figures/', cache.path = 'cache/')
+    opts_knit$set(base.url = '/', base.dir = NULL)
+  }
+  knit(f, paste('_posts/', base, '.md', sep = ''), envir = globalenv())
+})
