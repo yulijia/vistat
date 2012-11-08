@@ -86,6 +86,7 @@ That is only a static plot, and we can actually interact with the surface (e.g. 
 library(rgl)
 # perspective plot by OpenGL
 rgl.surface(fit$x, fit$y, 5 * fit$z)
+par3d(zoom=.7)
 ```
 
 Run the code below to see the surface rotating automatically if you are interested:

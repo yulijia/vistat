@@ -140,6 +140,7 @@ That is only a static plot, and we can actually interact with the surface (e.g. 
 library(rgl)
 # perspective plot by OpenGL
 rgl.surface(fit$x, fit$y, 5 * fit$z)
+par3d(zoom = 0.7)
 {% endhighlight %}
 
 ![plot of chunk plot-rgl](http://animation.r-forge.r-project.org/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-rgl.png) 
