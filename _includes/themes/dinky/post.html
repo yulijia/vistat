@@ -12,26 +12,27 @@
   {% endfor %}
   </ul>
   {{ content }}
-  <hr />
-  <div>Keywords:
-    <ul class="tag_box flat">
+  <div class="meta">
+    <h3>Meta</h3>
+    Keywords:
+    <ul class="tag_box inline">
       {% assign tags_list = page.tags %}  
       {% include JB/tags_list %}
     </ul>
     Categories:
-    <ul class="tag_box flat">
+    <ul class="tag_box inline">
       {% assign categories_list = page.categories %}
       {% include JB/categories_list %}
     </ul>
-  </div>
-  {% if page.reviewer != empty %}
-  <div>Reviewer:
-    <ul class="tag_box flat">
+    {% if page.reviewer != empty %}
+    Reviewer:
+    <ul class="tag_box inline">
     {% for id in page.reviewer %}{% assign reviewer = site.authors[id] %}
       <li><a href="{{ reviewer.homepage }}">{{ reviewer.name }}</a></li>
     {% endfor %}
     </ul>
+    {% endif %}
+    You can find the R Markdown source document in the <a href="https://github.com/supstat/vistat/tree/gh-pages/_posts">vistat repository</a> on Github.
   </div>
-  {% endif %}
   {% include JB/comments %}
 </section>
