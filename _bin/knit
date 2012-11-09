@@ -10,6 +10,8 @@ knit_hooks$set(pars = function(before, options, envir) {
   if (before) do.call(par, options$pars)
 }, rgl = hook_rgl, crop = hook_pdfcrop)
 
+options(reindent.spaces = 2) # formatR
+
 local({
   f = commandArgs(TRUE)
   base = sub('\\.[Rr]md$', '', basename(f))
