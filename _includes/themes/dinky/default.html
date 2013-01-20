@@ -4,7 +4,11 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="author" content="{{ site.author.name }}" />
-    <title>{{ page.title }}</title>
+    {% if page.date %}<meta name="citation_title" content="{{ page.title }}">{% for p in page.author %}{% assign author=site.authors[p] %}
+    <meta name="citation_author" content="{{ author.name }}">{% endfor %}
+    <meta name="citation_publication_date" content="{{ page.date | date:'%Y/%m/%d' }}">
+    <meta name="citation_journal_title" content="{{ site.author.name }}">{% endif %}
+    <title>{{ page.title }} | Vistat</title>
 
     <link href="/feed/" rel="alternate" title="{{ site.author.name }}" type="application/atom+xml" />
     <link rel="stylesheet" href="{{ ASSET_PATH }}/css/styles.css">
