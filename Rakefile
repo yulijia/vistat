@@ -101,27 +101,11 @@ task :preview do
   system "jekyll --auto --server"
 end # task :preview
 
-desc "Mount my R-Forge image dir to a local dir"
-task :mount do
-  system "sshfs yihui@r-forge.r-project.org:/srv/gforge/chroot/home/groups/animation/htdocs/vistat ./_figures"
-end # task :mount
-
-desc "Unmount _figures/"
-task :unmount do
-  system "fusermount -u ./_figures"
-end # task :unmount
-
 # Usage: rake knit
 desc "Knit all Rmd files for the server"
 task :knit do
   system "find ./_source -type f -iname *.Rmd | xargs -n1 -P4 ./_bin/knit"
 end # task :knit
-
-# Usage: rake neat
-desc "Knit all Rmd files locally"
-task :neat do
-  system "find _source -type f -iname *.Rmd | xargs -n1 -P4 ./_bin/knit"
-end # task :neat
 
 desc "Install dependencies"
 task :deps do
