@@ -51,7 +51,7 @@ text(7, -1.25, "A SIN AND COS CURVE", cex = 1.5)
 lines(x, -1.5 + runif(length(x), -0.005, 0.005), xpd = NA, lwd = 2)
 {% endhighlight %}
 
-![plot of chunk draw-xkcd](http://animation.r-forge.r-project.org/vistat/2012-11-08-make-xkcd-style-graphs-in-r/draw-xkcd.png) 
+![plot of chunk draw-xkcd](http://dl.dropbox.com/u/15335397/vistat/2012-11-08-make-xkcd-style-graphs-in-r/draw-xkcd.png) 
 
 
 There are other ways to use additional fonts in R graphics, such as the **tikzDevice** and **extrafonts** package; the former requires knowledge of LaTeX, and the latter is easier to use.
@@ -79,10 +79,10 @@ print(sessionInfo(), locale = FALSE)
 ## [1] stats     graphics  grDevices utils     datasets  base     
 ## 
 ## other attached packages:
-## [1] Cairo_1.5-1  knitr_0.8.13
+## [1] Cairo_1.5-2  knitr_1.0.10
 ## 
 ## loaded via a namespace (and not attached):
-## [1] digest_0.5.2   evaluate_0.4.2 formatR_0.6.3  plyr_1.7.1    
-## [5] stringr_0.6.1  tools_2.15.2
+## [1] digest_0.6.2   evaluate_0.4.3 formatR_0.7.2  stringr_0.6.2 
+## [5] tools_2.15.2
 {% endhighlight %}
 

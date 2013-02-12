@@ -23,7 +23,7 @@ library(animation)
 ani.options(nmax = 50)  # create 50 image frames
 set.seed(20121106)
 brownian.motion(n = 20, pch = 21, cex = 4, col = "red", bg = "yellow", 
-    xlim = c(-10, 10), ylim = c(-15, 15))
+  xlim = c(-10, 10), ylim = c(-15, 15))
 {% endhighlight %}
 
 
@@ -37,7 +37,7 @@ brownian.motion(n = 20, pch = 21, cex = 4, col = "red", bg = "yellow",
       var imgs = Array(50);
       for (i=0; ; i++) {
         if (i == imgs.length) break;
-        imgs[i] = "http://animation.r-forge.r-project.org/vistat/2012-11-06-brownian-motion-with-r/bw-fun" + (i + 1) + ".png";
+        imgs[i] = "http://dl.dropbox.com/u/15335397/vistat/2012-11-06-brownian-motion-with-r/bw-fun" + (i + 1) + ".png";
       }
       $("#bw_fun").scianimator({
           "images": imgs,

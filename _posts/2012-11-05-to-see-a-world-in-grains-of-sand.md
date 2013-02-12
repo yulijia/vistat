@@ -15,8 +15,8 @@ This article was borrowed from my [blog post](http://yihui.name/en/2008/09/to-se
 # generate the data
 set.seed(20111105)
 x = rbind(matrix(rnorm(10000 * 2), ncol = 2), local({
-    r = runif(10000, 0, 2 * pi)
-    0.5 * cbind(sin(r), cos(r))
+  r = runif(10000, 0, 2 * pi)
+  0.5 * cbind(sin(r), cos(r))
 }))
 x = as.data.frame(x[sample(nrow(x)), ])
 {% endhighlight %}
@@ -31,7 +31,7 @@ It is not useful since you can see nothing.
 plot(x)
 {% endhighlight %}
 
-![plot of chunk plot-orig](http://animation.r-forge.r-project.org/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-orig.png) 
+![plot of chunk plot-orig](http://dl.dropbox.com/u/15335397/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-orig.png) 
 
 
 ## Transparent colors
@@ -43,7 +43,7 @@ We take `alpha = 0.1` to generate semi-transparent colors.
 plot(x, col = rgb(0, 0, 0, 0.1))
 {% endhighlight %}
 
-![plot of chunk plot-alpha](http://animation.r-forge.r-project.org/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-alpha.png) 
+![plot of chunk plot-alpha](http://dl.dropbox.com/u/15335397/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-alpha.png) 
 
 
 ## Set axes limits
@@ -55,7 +55,7 @@ Zoom into the point cloud:
 plot(x, xlim = c(-1, 1), ylim = c(-1, 1))
 {% endhighlight %}
 
-![plot of chunk plot-lim](http://animation.r-forge.r-project.org/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-lim.png) 
+![plot of chunk plot-lim](http://dl.dropbox.com/u/15335397/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-lim.png) 
 
 
 ## Smaller symbols
@@ -67,7 +67,7 @@ Use smaller points:
 plot(x, pch = ".")
 {% endhighlight %}
 
-![plot of chunk plot-dot](http://animation.r-forge.r-project.org/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-dot.png) 
+![plot of chunk plot-dot](http://dl.dropbox.com/u/15335397/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-dot.png) 
 
 
 ## Subset
@@ -79,7 +79,7 @@ Only take a look at a random subset:
 plot(x[sample(nrow(x), 1000), ])
 {% endhighlight %}
 
-![plot of chunk plot-subset](http://animation.r-forge.r-project.org/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-subset.png) 
+![plot of chunk plot-subset](http://dl.dropbox.com/u/15335397/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-subset.png) 
 
 
 ## Hexagons
@@ -92,7 +92,7 @@ library(hexbin)
 with(x, plot(hexbin(V1, V2)))
 {% endhighlight %}
 
-![plot of chunk plot-hexbin](http://animation.r-forge.r-project.org/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-hexbin.png) 
+![plot of chunk plot-hexbin](http://dl.dropbox.com/u/15335397/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-hexbin.png) 
 
 
 ## 2D kernel density estimation
@@ -107,7 +107,7 @@ fit = kde2d(x[, 1], x[, 2])
 persp(fit$x, fit$y, fit$z)
 {% endhighlight %}
 
-![plot of chunk plot-kde2d](http://animation.r-forge.r-project.org/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-kde2d.png) 
+![plot of chunk plot-kde2d](http://dl.dropbox.com/u/15335397/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-kde2d.png) 
 
 
 That is only a static plot, and we can actually interact with the surface (e.g. rotating and zooming) if we draw it with the **rgl** package:
@@ -120,7 +120,7 @@ rgl.surface(fit$x, fit$y, 5 * fit$z)
 par3d(zoom = 0.7)
 {% endhighlight %}
 
-![plot of chunk plot-rgl](http://animation.r-forge.r-project.org/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-rgl.png) 
+![plot of chunk plot-rgl](http://dl.dropbox.com/u/15335397/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-rgl.png) 
 
 
 Run the code below to see the surface rotating automatically if you are interested:
@@ -130,7 +130,7 @@ Run the code below to see the surface rotating automatically if you are interest
 # animation
 M = par3d("userMatrix")
 play3d(par3dinterp(userMatrix = list(M, rotate3d(M, pi/2, 1, 0, 0), 
-    rotate3d(M, pi/2, 0, 1, 0), rotate3d(M, pi, 0, 0, 1))), duration = 20)
+  rotate3d(M, pi/2, 0, 1, 0), rotate3d(M, pi, 0, 0, 1))), duration = 20)
 {% endhighlight %}
 
 

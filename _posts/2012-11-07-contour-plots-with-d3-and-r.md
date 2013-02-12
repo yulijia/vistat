@@ -59,9 +59,9 @@ And write the data to a `script` tag:
 
 {% highlight r %}
 xy = paste(unlist(lapply(res, function(z) {
-    xs = paste(round(z$x, 3), collapse = ",")
-    ys = paste(round(z$y, 3), collapse = ",")
-    sprintf("{\n  \"x\": [%s],\n  \"y\": [%s]\n}", xs, ys)
+  xs = paste(round(z$x, 3), collapse = ",")
+  ys = paste(round(z$y, 3), collapse = ",")
+  sprintf("{\n  \"x\": [%s],\n  \"y\": [%s]\n}", xs, ys)
 })), collapse = ", \n")
 cat("<script>", sprintf("var data = [%s]", xy), "</script>", sep = "\n")
 {% endhighlight %}
@@ -206,7 +206,7 @@ With R, it is just one line of code but it is a static plot (not interactive):
 contour(volcano, col = "darkgreen", lwd = 2)
 {% endhighlight %}
 
-![plot of chunk contour-r](http://animation.r-forge.r-project.org/vistat/2012-11-07-contour-plots-with-d3-and-r/contour-r.png) 
+![plot of chunk contour-r](http://dl.dropbox.com/u/15335397/vistat/2012-11-07-contour-plots-with-d3-and-r/contour-r.png) 
 
 
 ## Conclusion
