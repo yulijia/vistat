@@ -32,7 +32,7 @@
     {% endfor %}
     </ul>
     {% endif %}
-    You can find the R Markdown source document in the <a href="https://github.com/supstat/vistat/tree/gh-pages/_source">vistat repository</a> on Github.
+    You can find the R Markdown source document in the <a href="https://github.com/supstat/vistat/tree/gh-pages/_source/{{ page.date | date:'%Y-%m-%d'}}-{{ page.url | split:'/' | last }}.Rmd">vistat repository</a> on Github.
   </div>
   {% include JB/comments %}
 </section>
