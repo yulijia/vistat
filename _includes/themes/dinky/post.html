@@ -4,8 +4,8 @@
   {% for id in page.author %}{% assign author = site.authors[id] %}
     <li>{% if author %}
     <a href="{{ author.homepage }}">{{ author.name }}</a>
-      ({{ author.email | replace:'@','[at]' }}{% if author.github %}; Follow me on <a href="https://github.com/{{ author.github }}">Github</a>{% endif %}
-      {% if author.twitter %}and <a href="http://twitter.com/{{ author.twitter }}">Twitter</a>{% endif %}) {{ author.bio | markdownify | replace:'<p>','' | replace:'</p>','' }}
+      ({{ author.email | replace:'@','<span>@</span>' }}{% if author.github %} / <a href="https://github.com/{{ author.github }}">Github</a>{% endif %}
+      {% if author.twitter %} / <a href="http://twitter.com/{{ author.twitter }}">Twitter</a>{% endif %}) {{ author.bio | markdownify | replace:'<p>','' | replace:'</p>','' }}
     {% else %}
     Please specify author information for {{ id }} in <a href="https://github.com/supstat/vistat/blob/gh-pages/_config.yml">_config.yml</a>.
     {% endif %}</li>
