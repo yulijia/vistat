@@ -20,6 +20,13 @@ author :
 
 # All authors please enter your info here alphabetically by id:
 authors:
+  cboettig:
+    name: Carl Boettiger
+    email: cboettig@gmail.com
+    homepage: http://www.carlboettiger.info
+    github: cboettig
+    twitter: cboettig
+    bio: A post-doctoral researcher with Marc Mangel and Steve Munch in the Center for Stock Assessment Research, at UC Santa Cruz, working on regime shifts in ecology and evolution.
   taiyun:
     name: Taiyun Wei
     email: taiyun.wei@cos.name
