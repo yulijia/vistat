@@ -17,7 +17,7 @@ rake post title="A Title"
 
 and you will get an [R Markdown](http://www.rstudio.com/ide/docs/authoring/using_markdown) (Rmd) file under `_source/` named `yyyy-mm-dd-a-title.Rmd`, which is a plain text file and you can edit it with your favorite text editor. At the moment, RStudio has the best support to Rmd files. Here is an [Rmd sample file](https://github.com/yihui/knitr-examples/blob/master/001-minimal.Rmd) and its [output](https://github.com/yihui/knitr-examples/blob/master/001-minimal.md).
 
-If you do not have or understand `rake`, just copy an existing Rmd file, rename it and open with a text editor.
+If you do not have or understand `rake`, just copy an existing Rmd file, rename and open it with a text editor.
 
 ## Edit an Article
 
@@ -53,13 +53,13 @@ If you want to preview your article in the website, you can run
 rake preview
 {% endhighlight %}
 
-which is basically a wapper to `jekyll --server --auto`. Of course you need to install Jekyll first.
+which is basically a wrapper to `jekyll --server --auto`. Of course you need to install Jekyll first.
 
 ## Submission
 
 After you are done with an article, commit it to your forked repository and submit a pull request to us. We will get it reviewed and you will see comments online. Further revisions may be required, in which case you just make the revision and continue commit in the changes, and they will appear in the previous pull request.
 
-Please commit the source file only (`*.Rmd`) and do not commit the output files (`*.md` and figures). We will re-compile the source files and upload images after we accept the article. Therefore if your article involves with special packages or data, you should add clear instructions on them in the article.
+Please commit the source file only (`*.Rmd`) and do not commit the output files (`*.md` and figures). We will re-compile the source files and upload images after we accept the article. Therefore if your article involves special packages or data, you should add clear instructions on them in the article.
 
 ## Reviewers
 
