@@ -1,5 +1,14 @@
 #!/usr/bin/env Rscript
 
+# install dependencies
+for (i in setdiff(c(
+  'animation',
+  'knitr',
+  'hexbin'
+), .packages(TRUE))) {
+  install.packages(i)
+}
+
 # formatR indent 2 spaces; print width 65; no progress
 options(reindent.spaces = 2, KNITR_WIDTH = 65, KNITR_PROGRESS = FALSE)
 
