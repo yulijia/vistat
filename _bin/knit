@@ -2,6 +2,7 @@
 
 # install dependencies
 for (i in setdiff(c(
+  'Cairo',
   'animation',
   'knitr',
   'hexbin'
