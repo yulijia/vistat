@@ -107,11 +107,6 @@ task :knit do
   system "find ./_source -type f -iname *.Rmd | xargs -n1 -P4 ./_bin/knit"
 end # task :knit
 
-desc "Install dependencies"
-task :deps do
-  system "./_bin/deps"
-end # task :deps
-
 # Public: Alias - Maintains backwards compatability for theme switching.
 task :switch_theme => "theme:switch"
 
