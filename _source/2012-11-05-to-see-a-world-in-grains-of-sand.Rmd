@@ -85,6 +85,7 @@ That is only a static plot, and we can actually interact with the surface (e.g. 
 ```{r plot-rgl, rgl=TRUE, fig.width=5, fig.height=5}
 library(rgl)
 # perspective plot by OpenGL
+rgl.open()
 rgl.surface(fit$x, fit$y, 5 * fit$z)
 par3d(zoom=.7)
 ```
