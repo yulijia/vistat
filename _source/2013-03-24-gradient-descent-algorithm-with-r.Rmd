@@ -17,8 +17,8 @@ The arrows will take you to the optimum step by step.
 
 Default function in `grad.desc()` is: $$z=x{^2}+y{^2}$$
 
-```{r grad.desc-right, fig.show='animate', interval=.2, fig.height=5}
-library(animation)
+```{r grad-desc-right, fig.show='animate', interval=.2, fig.height=5}
+library(animation) 
 grad.desc()
 ```
 
@@ -28,7 +28,7 @@ This example shows how the gradient descent algorithm will fail with a too large
 
 To find a local minimum of a bivariate objective function: $$z=\sin(\frac{1}{2}x{^2}-\frac{1}{4}y{^4}+3)\cos(2x+1-e{^y})$$
 
-```{r grad.desc-wrong, fig.show='animate', interval=.2, fig.height=5}
+```{r grad-desc-wrong, fig.show='animate', interval=.2, fig.height=5}
 ani.options(nmax = 70)
 f2 = function(x, y) sin(1/2 * x^2 - 1/4 * y^2 + 3) * cos(2 * x + 1 - exp(y))
 grad.desc(f2, c(-2, -2, 2, 2), c(-1, 0.5), gamma = 0.3, tol = 1e-04)
