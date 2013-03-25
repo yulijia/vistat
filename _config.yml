@@ -41,6 +41,13 @@ authors:
     github: yihui
     twitter: xieyihui
     bio: Department of Statistics, Iowa State University; interested in statistical computing and graphics; author of **knitr**, **animation** and a few other R packages.
+  yulijia:
+    name: Lijia Yu
+    email: yu@lijiayu.net
+    homepage: http://lijiayu.net
+    github: yulijia
+    twitter: YuLijia
+    bio: A master candidate majoring in Bioinformatics at Beijing Institute of Genomics.
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
