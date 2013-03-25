@@ -19,7 +19,6 @@ Default function in `grad.desc()` is: $$z=x{^2}+y{^2}$$
 
 ```{r grad.desc-right, fig.show='animate', interval=.2, fig.height=5}
 library(animation)
-ani.options(nmax = 50)    
 grad.desc()
 ```
 
