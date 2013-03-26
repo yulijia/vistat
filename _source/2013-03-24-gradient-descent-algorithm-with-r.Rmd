@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gradient Descent Algorithm with R"
+title: "Demonstration of the Gradient Descent Algorithm"
 author: [yulijia]
 categories: [Animation, Computational Statistics]
 tags: [Gradient descent algorithm]
