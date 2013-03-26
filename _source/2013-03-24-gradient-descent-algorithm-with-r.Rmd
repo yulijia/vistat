@@ -2,7 +2,7 @@
 layout: post
 title: "Gradient Descent Algorithm with R"
 author: [yulijia]
-categories: [Animation, CompStat]
+categories: [Animation, Computational Statistics]
 tags: [Gradient descent algorithm]
 reviewer: [yihui]
 animation: true
