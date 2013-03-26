@@ -29,7 +29,7 @@ This example shows how the gradient descent algorithm will fail with a too large
 
 To find a local minimum of a bivariate objective function: $$z=\sin(\frac{1}{2}x{^2}-\frac{1}{4}y{^4}+3)\cos(2x+1-e{^y})$$
 
-```{r grad-desc-wrong, fig.show='animate', interval=.2, fig.height=5}
+```{r grad-desc-wrong, fig.show='animate', interval=.2, fig.height=8, fig.width=8}
 ani.options(nmax = 70)
 par(mar = c(4, 4, 2, .1))
 f2 = function(x, y) sin(1/2 * x^2 - 1/4 * y^2 + 3) * cos(2 * x + 1 - exp(y))
