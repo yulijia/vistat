@@ -9,7 +9,7 @@ animation: true
 ---
 {% include JB/setup %}
 
-We can use the [**animation** package](http://yihui.name/animation) to produce animationsin R. This short article shows you how to create a Brownian motion with the `brownian.motion()` function.
+We can use the [**animation** package](http://yihui.name/animation) to produce animations in R. This short article shows you how to create a Brownian motion with the `brownian.motion()` function.
 
 Simply speaking, a Brownian motion shows the trace of the coordinates
 
