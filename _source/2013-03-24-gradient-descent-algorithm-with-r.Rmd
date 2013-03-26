@@ -1,0 +1,39 @@
+---
+layout: post
+title: "Gradient Descent Algorithm with R"
+author: [yulijia]
+categories: [Animation, CompStat]
+tags: [Gradient Descent Algorithm]
+reviewer: [yihui]
+animation: true
+---
+{% include JB/setup %}
+
+In the [**animation** package](http://yihui.name/animation), there is a function named `grad.desc()`. It provides a visual illustration for the process of minimizing a real-valued function through [Gradient Descent Algorithm](http://en.wikipedia.org/wiki/Gradient_descent). These two examples show you how to use `grad.desc()` function.
+
+## Demonstration of the Gradient Descent Algorithm
+
+The arrows will take you to the optimum step by step.
+
+Default function in `grad.desc()` is: $$z=x{^2}+y{^2}$$
+
+```{r grad-desc-right, fig.show='animate', interval=.2, fig.height=5}
+library(animation) 
+par(mar = c(4, 4, 2, .1))
+grad.desc()
+```
+
+## When Gradient Descent Algorithm Fails
+
+This example shows how the gradient descent algorithm will fail with a too large step length.
+
+To find a local minimum of a bivariate objective function: $$z=\sin(\frac{1}{2}x{^2}-\frac{1}{4}y{^4}+3)\cos(2x+1-e{^y})$$
+
+```{r grad-desc-wrong, fig.show='animate', interval=.2, fig.height=5}
+ani.options(nmax = 70)
+par(mar = c(4, 4, 2, .1))
+f2 = function(x, y) sin(1/2 * x^2 - 1/4 * y^2 + 3) * cos(2 * x + 1 - exp(y))
+grad.desc(f2, c(-2, -2, 2, 2), c(-1, 0.5), gamma = 0.3, tol = 1e-04)
+```
+
+Done.
