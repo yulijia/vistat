@@ -1,0 +1,53 @@
+---
+layout: post
+title: "Make Visual Illusions Graphs in R"
+author: [yulijia]
+categories: [Fun]
+tags: [Scintillating grid, Hermann grid, Lilac chaser]
+reviewer: [yihui]
+animation: true
+---
+{% include JB/setup %}
+
+This artical was demonstrated how to make [visual illusions](http://en.wikipedia.org/wiki/Optical_illusion) graphs with R. A visual illusion is a distortion of form, size or color in the visual field. In the [**animation** package](http://yihui.name/animation), functions `vi.grid.illusion()` and `vi.lilac.chaser()` can help us draw visual illusions graphs.
+
+##Scintillating grid illusion
+
+`vi.grid.illusion()` function provides illustrations for Scintillating grid illusion and Hermann grid illusion. They are two most common types of [grid illusions](http://en.wikipedia.org/wiki/Grid_illusion). 
+
+You can see dark dots appear and disappear rapidly at random intersections.
+
+```{r scintillating-grid-illusion, fig.height=5, fig.width=5}
+library(animation) 
+vi.grid.illusion()
+```
+
+##Hermann grid illusion
+
+From Hermann grid illusion graph, you can see grey blobs disappear when looking directly at an intersection.
+
+```{r hermann-grid-illusion, fig.height=5, fig.width=5}
+vi.grid.illusion(type = "h", lwd = 22, nrow = 5, ncol = 5, col = "white")
+```
+
+##Lilac Chaser
+
+We can draw [Lilac chaser](http://en.wikipedia.org/wiki/Lilac_chaser) with function `vi.lilac.chaser()`.
+
+Stare at the center cross for a few (say 30) seconds to experience the phenomena of the illusion.
+
+- A gap running around the circle of lilac discs;
+
+- A green disc running around the circle of lilac discs in place of the gap;
+
+- The green disc running around on the grey background, with the lilac discs having disappeared in sequence.
+
+```{r lilac-chaser, fig.show='animate', interval=.05, fig.height=5, fig.width=5}
+ani.options(nmax = 20)
+par(mar = c(4, 4, 4, 4))
+vi.lilac.chaser()
+```
+
+##Notic
+
+Don’t worry if you can't see all the phenomena described. For many illusions, there is a percentage of people with perfectly normal vision who just don’t see it, often for reasons currently unknown.
