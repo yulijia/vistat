@@ -13,9 +13,7 @@ In the [**animation** package](http://yihui.name/animation), there is a function
 
 ## Demonstration of the Gradient Descent Algorithm
 
-The arrows will take you to the optimum step by step.
-
-Default function in `grad.desc()` is: $$z=x{^2}+y{^2}$$
+The default objective function in `grad.desc()` is $$f(x,y)=x{^2}+2y{^2}$$. The arrows will take you to the minima step by step:
 
 ```{r grad-desc-right, fig.show='animate', interval=.2}
 library(animation) 
