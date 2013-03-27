@@ -48,6 +48,6 @@ par(mar = c(4, 4, 4, 4))
 vi.lilac.chaser()
 ```
 
-##Notic
+## Note
 
 Don’t worry if you can't see all the phenomena described. For many illusions, there is a percentage of people with perfectly normal vision who just don’t see it, often for reasons currently unknown.
