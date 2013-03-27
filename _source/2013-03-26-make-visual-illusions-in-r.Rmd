@@ -50,3 +50,7 @@ vi.lilac.chaser()
 ## Note
 
 Don’t worry if you can't see all the phenomena described. For many illusions, there is a percentage of people with perfectly normal vision who just don’t see it, often for reasons currently unknown.
+
+## Further reading
+
+You can see more illusions created by [Kohske](http://rpubs.com/kohske/R-de-illusion) in R, which also illustrated the power of the **grid** package.
