@@ -70,12 +70,6 @@ grad.desc(f2, c(-2, -2, 2, 2), c(-1, 0.5), gamma = 0.3, tol = 1e-04)
 {% endhighlight %}
 
 
-
-{% highlight text %}
-## Warning: Maximum number of iterations reached!
-{% endhighlight %}
-
-
 <div class="scianimator">
 <div id="grad_desc_wrong" style="display: inline-block;">
 </div>
