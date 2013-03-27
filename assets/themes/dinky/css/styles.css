@@ -332,6 +332,10 @@ section {
   padding-bottom:50px;
 }
 
+iframe {
+  margin: auto;
+  display: block;
+}
 
 /* Footer */
 
