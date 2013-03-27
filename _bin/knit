@@ -42,5 +42,6 @@ invisible(local({
   opts_knit$set(base.url = if (as.character(file.info('figure/')[, 'mode']) != '2755') '/figure/' else {
     'http://isu.r-forge.r-project.org/vistat/'
   })
+  message(f)
   knit(f, paste('_posts/', base, '.md', sep = ''), envir = globalenv(), quiet = TRUE)
 }))
