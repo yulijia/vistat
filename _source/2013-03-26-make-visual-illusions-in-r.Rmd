@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "Make Visual Illusions Pictures in R"
+title: "Making Visual Illusions in R"
 author: [yulijia]
-categories: [Fun]
+categories: [Animation, Fun]
 tags: [Scintillating grid, Hermann grid, Lilac chaser]
 reviewer: [yihui]
 animation: true
 ---
 {% include JB/setup %}
 
-This article demonstrated how to make [visual illusions](http://en.wikipedia.org/wiki/Optical_illusion) pictures with R. A visual illusion is a distortion of form, size or color in the visual field. In the [**animation** package](http://yihui.name/animation), functions `vi.grid.illusion()` and `vi.lilac.chaser()` can help us draw visual illusions pictures.
+This article demonstrates how to make [visual illusions](http://en.wikipedia.org/wiki/Optical_illusion) with R. A visual illusion is a distortion of form, size or color in the visual field. In the [**animation** package](http://yihui.name/animation), functions `vi.grid.illusion()` and `vi.lilac.chaser()` can be used to produce visual illusions.
 
 ## Scintillating grid illusion
 
-`vi.grid.illusion()` function provides illustrations for Scintillating grid illusion and Hermann grid illusion. They are two most common types of [grid illusions](http://en.wikipedia.org/wiki/Grid_illusion). 
+`vi.grid.illusion()` function provides illustrations for the Scintillating grid illusion and Hermann grid illusion. They are two most common types of [grid illusions](http://en.wikipedia.org/wiki/Grid_illusion). 
 
 You can see dark dots appear and disappear rapidly at random intersections.
 
@@ -32,9 +32,9 @@ vi.grid.illusion(type = "h", lwd = 22, nrow = 5, ncol = 5, col = "white")
 
 ## Lilac Chaser
 
-We can draw [Lilac chaser](http://en.wikipedia.org/wiki/Lilac_chaser) with function `vi.lilac.chaser()`.
+We can draw a [Lilac chaser](http://en.wikipedia.org/wiki/Lilac_chaser) with the function `vi.lilac.chaser()`.
 
-Stare at the center cross for a few (say 30) seconds to experience the phenomena of the illusion.
+Stare at the center cross for a few (say 30) seconds to experience the illusion.
 
 - A gap running around the circle of lilac discs;
 - A green disc running around the circle of lilac discs in place of the gap;
