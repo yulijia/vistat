@@ -10,10 +10,10 @@ Statistical graphics are powerful -- your eyes will jump to the graph below imme
 
 Vistat aims to provide _working_ recipes for statistical graphics by building them from source. The website is based on Github/Jekyll, and graphs are generated dynamically through the R package [**knitr**](http://yihui.name/knitr), hence reproducibility is guaranteed, and readers can see the source code at the same time.
 
-## Latest 5 posts
+## Latest 10 posts
 
 <ul class="posts">
-  {% for post in site.posts limit:5 %}
+  {% for post in site.posts limit:10 %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
