@@ -11,7 +11,7 @@ for (i in setdiff(c(
 }
 
 # formatR indent 2 spaces; print width 65; no progress
-options(reindent.spaces = 2, KNITR_WIDTH = 65, KNITR_PROGRESS = FALSE)
+options(reindent.spaces = 2, KNITR_WIDTH = 65)
 
 library(knitr)
 stopifnot('_source' %in% list.files()) # run me from the root directory
@@ -42,5 +42,5 @@ invisible(local({
   opts_knit$set(base.url = if (as.character(file.info('figure/')[, 'mode']) != '2755') '/figure/' else {
     'http://isu.r-forge.r-project.org/vistat/'
   })
-  knit(f, paste('_posts/', base, '.md', sep = ''), envir = globalenv())
+  knit(f, paste('_posts/', base, '.md', sep = ''), envir = globalenv(), quiet = TRUE)
 }))
