@@ -39,11 +39,7 @@ invisible(local({
   # http://dl.dropbox.com/u/15335397/vistat/ but the problem is that animations
   # do not work well under Google Chrome for some reason (SciAnimator keeps on
   # fetching images from Dropbox)
-  opts_knit$set(base.url = if (Sys.getenv('USER') != 'yihui') '/figure/' else {
-    # mount my R-Forge dir to the local figure dir
-    if (as.character(file.info('figure/')[, 'mode']) != '2755') {
-      stopifnot(system('sshfs yihui@r-forge.r-project.org:/srv/gforge/chroot/home/groups/isu/htdocs/vistat figure') == 0L)
-    }
+  opts_knit$set(base.url = if (as.character(file.info('figure/')[, 'mode']) != '2755') '/figure/' else {
     'http://isu.r-forge.r-project.org/vistat/'
   })
   knit(f, paste('_posts/', base, '.md', sep = ''), envir = globalenv())
