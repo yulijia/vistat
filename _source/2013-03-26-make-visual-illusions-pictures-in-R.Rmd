@@ -37,9 +37,7 @@ We can draw [Lilac chaser](http://en.wikipedia.org/wiki/Lilac_chaser) with funct
 Stare at the center cross for a few (say 30) seconds to experience the phenomena of the illusion.
 
 - A gap running around the circle of lilac discs;
-
 - A green disc running around the circle of lilac discs in place of the gap;
-
 - The green disc running around on the grey background, with the lilac discs having disappeared in sequence.
 
 ```{r lilac-chaser, fig.show='animate', interval=.05, fig.height=5, fig.width=5}
