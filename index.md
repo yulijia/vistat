@@ -16,6 +16,7 @@ Vistat aims to provide _working_ recipes for statistical graphics by building th
   {% for post in site.posts limit:10 %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
+  <li><a href="archive.html">Read More...</a></li>
 </ul>
 
 ## How to contribute
