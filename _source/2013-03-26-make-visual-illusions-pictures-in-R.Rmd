@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Make Visual Illusions Graphs in R"
+title: "Make Visual Illusions Pictures in R"
 author: [yulijia]
 categories: [Fun]
 tags: [Scintillating grid, Hermann grid, Lilac chaser]
@@ -9,7 +9,7 @@ animation: true
 ---
 {% include JB/setup %}
 
-This artical was demonstrated how to make [visual illusions](http://en.wikipedia.org/wiki/Optical_illusion) graphs with R. A visual illusion is a distortion of form, size or color in the visual field. In the [**animation** package](http://yihui.name/animation), functions `vi.grid.illusion()` and `vi.lilac.chaser()` can help us draw visual illusions graphs.
+This artical was demonstrated how to make [visual illusions](http://en.wikipedia.org/wiki/Optical_illusion) pictures with R. A visual illusion is a distortion of form, size or color in the visual field. In the [**animation** package](http://yihui.name/animation), functions `vi.grid.illusion()` and `vi.lilac.chaser()` can help us draw visual illusions pictures.
 
 ##Scintillating grid illusion
 
@@ -24,7 +24,7 @@ vi.grid.illusion()
 
 ##Hermann grid illusion
 
-From Hermann grid illusion graph, you can see grey blobs disappear when looking directly at an intersection.
+From Hermann grid illusion picture, you can see grey blobs disappear when looking directly at an intersection.
 
 ```{r hermann-grid-illusion, fig.height=5, fig.width=5}
 vi.grid.illusion(type = "h", lwd = 22, nrow = 5, ncol = 5, col = "white")
