@@ -9,7 +9,7 @@ animation: true
 ---
 {% include JB/setup %}
 
-This artical was demonstrated how to make [visual illusions](http://en.wikipedia.org/wiki/Optical_illusion) pictures with R. A visual illusion is a distortion of form, size or color in the visual field. In the [**animation** package](http://yihui.name/animation), functions `vi.grid.illusion()` and `vi.lilac.chaser()` can help us draw visual illusions pictures.
+This article demonstrated how to make [visual illusions](http://en.wikipedia.org/wiki/Optical_illusion) pictures with R. A visual illusion is a distortion of form, size or color in the visual field. In the [**animation** package](http://yihui.name/animation), functions `vi.grid.illusion()` and `vi.lilac.chaser()` can help us draw visual illusions pictures.
 
 ## Scintillating grid illusion
 
