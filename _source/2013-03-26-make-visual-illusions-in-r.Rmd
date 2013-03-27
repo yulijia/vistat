@@ -42,7 +42,7 @@ Stare at the center cross for a few (say 30) seconds to experience the illusion.
 
 ```{r lilac-chaser, fig.show='animate', interval=.05, fig.height=5, fig.width=5}
 ani.options(nmax = 20)
-par(mar = c(4, 4, 4, 4))
+par(mar = c(1, 1, 1, 1))
 vi.lilac.chaser()
 ```
 
