@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Flipping Coins Simulation with R"
+title: "Simulation of Coin Flipping with R"
 author: [yulijia]
 categories: [Animation, Probability]
 tags: [Coin flipping, Bernoulli trial]
