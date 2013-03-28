@@ -1,5 +1,6 @@
 #!/usr/bin/env Rscript
 
+stopifnot(packageVersion('knitr') >= '1.1.9')
 # install dependencies
 for (i in setdiff(c(
   'Cairo',
