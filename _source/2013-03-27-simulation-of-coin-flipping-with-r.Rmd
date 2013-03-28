@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Simulation of Coin Flipping with R"
+author: [yulijia]
+categories: [Animation, Probability]
+tags: [Coin flipping, Bernoulli trial]
+reviewer: [yihui]
+animation: true
+---
+{% include JB/setup %}
+
+In the [**animation** package](http://yihui.name/animation), the function `flip.coin()` provides a simulation to the process of flipping coins and computes the frequencies for 'heads' and 'tails'. Coin flipping is a famous [Bernoulli trial](http://en.wikipedia.org/wiki/Bernoulli_trial). When you flip a coin, there are two possible outcomes: heads and tails. A fair coin has the probability of 'heads' 0.5 by definition.
+
+## Head or tail
+
+In this case, we toss a fair coin 100 times.
+
+```{r head-or-tail, fig.show='animate'}
+library(animation) 
+ani.options(nmax = 100)
+par(mar = c(2, 4, 2, 2))
+flip.coin(bg = "yellow")
+```
+
+## Coin stands
+
+In this case, we set the coin can stands when flipping.
+
+```{r coin-stands, fig.show='animate'}
+ani.options(nmax = 100)
+par(mar = c(2, 4, 2, 2))
+flip.coin(faces = c("Head", "Stand", "Tail"), type = "n", prob = c(0.45, 0.1, 0.45), col = c(1, 2, 4))
+```
