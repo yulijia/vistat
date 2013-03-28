@@ -9,7 +9,7 @@ animation: true
 ---
 {% include JB/setup %}
 
-In the [**animation** package](http://yihui.name/animation), functions `flip.coin` provides a simulation to the process of flipping coins and computes the frequencies for 'heads' and 'tails'. Coin flipping is a famous [Bernoulli trial](http://en.wikipedia.org/wiki/Bernoulli_trial). When you flip a coin, there are two possible outcomes: heads and tails. A fair coin has the probability of 'heads' 0.5 by definition.
+In the [**animation** package](http://yihui.name/animation), the function `flip.coin()` provides a simulation to the process of flipping coins and computes the frequencies for 'heads' and 'tails'. Coin flipping is a famous [Bernoulli trial](http://en.wikipedia.org/wiki/Bernoulli_trial). When you flip a coin, there are two possible outcomes: heads and tails. A fair coin has the probability of 'heads' 0.5 by definition.
 
 ## Head or tail
 
