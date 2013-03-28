@@ -26,7 +26,7 @@ flip.coin(bg = "yellow")
 
 In this case, we set the coin can stands when flipping.
 
-```{r hermann-grid-illusion, fig.show='animate'}
+```{r coin-stands, fig.show='animate'}
 ani.options(nmax = 100)
 par(mar = c(2, 4, 2, 2))
 flip.coin(faces = c("Head", "Stand", "Tail"), type = "n", prob = c(0.45, 0.1, 0.45), col = c(1, 2, 4))
