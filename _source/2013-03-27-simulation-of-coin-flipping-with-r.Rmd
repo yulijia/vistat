@@ -15,9 +15,9 @@ In the [**animation** package](http://yihui.name/animation), the function `flip.
 
 In this case, we toss a fair coin 100 times.
 
-```{r head-or-tail, fig.show='animate'}
+```{r head-or-tail, fig.show='animate', fig.height=5, interval=.3}
 library(animation) 
-ani.options(nmax = 100)
+ani.options(nmax = 100, interval=.3)
 par(mar = c(2, 4, 2, 2))
 flip.coin(bg = "yellow")
 ```
@@ -26,8 +26,8 @@ flip.coin(bg = "yellow")
 
 In this case, we set the coin can stands when flipping.
 
-```{r coin-stands, fig.show='animate'}
-ani.options(nmax = 100)
+```{r coin-stands, fig.show='animate', fig.height=5, interval=.3}
+ani.options(nmax = 100, interval=.3)
 par(mar = c(2, 4, 2, 2))
 flip.coin(faces = c("Head", "Stand", "Tail"), type = "n", prob = c(0.45, 0.1, 0.45), col = c(1, 2, 4))
 ```
