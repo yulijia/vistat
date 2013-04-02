@@ -60,7 +60,7 @@ $$
 
 ```{r rotating-egg, fig.show='animate', interval=.1}
 library(animation)
-egg_rotation<- function(H = 1, angle = seq(0,pi*2,0.01), pos = c(0, 0)) {
+egg_rotation = function(H = 1, angle = seq(0,pi*2,length=30), pos = c(0, 0)) {
   t = seq(-pi, pi, by = 0.01)
   for (i in 1:length(angle)) {
     x = H * 0.78 * cos(t/4) * sin(t)
