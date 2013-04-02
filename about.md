@@ -23,7 +23,7 @@ If you do not have or understand `rake`, just copy an existing Rmd file, rename 
 
 There are a few fields in the header such as `author` and `tags`; if you have multiple entries, use the comma to separate them, e.g. `author: [taiyun, yihui]`. Note all authors need to put their information in [`_config.yml`](https://github.com/supstat/vistat/blob/gh-pages/_config.yml), and input the author id's to the `author` field (the same applies to reviewers).
 
-You can write math in the LaTeX syntax, e.g. `$\alpha+\beta$` renders inline like $\alpha+\beta$, and `$$f(x)=\frac{1}{\sqrt{2\pi}}e^{-x^2/2}$$` renders the display style
+You can write math in the LaTeX syntax, e.g. `$$\alpha+\beta$$` in a paragraph renders inline like $$\alpha+\beta$$, and `$$f(x)=\frac{1}{\sqrt{2\pi}}e^{-x^2/2}$$` in a separate paragraph renders the display style
 
 $$f(x)=\frac{1}{\sqrt{2\pi}}e^{-x^2/2}$$
 
