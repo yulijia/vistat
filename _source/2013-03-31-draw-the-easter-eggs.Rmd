@@ -143,9 +143,10 @@ x = (1 + c * phi2) * sin(phi2) * cos(theta1)
 y = (1 + c * phi2) * sin(phi2) * sin(theta1)
 z <- b * cos(phi2)
 surface3d(x, y, z, color = rainbow(10))
+par3d(zoom = .7)
 ```
 
-## Reference
+## References
 
 - [Equation of Egg Shaped Curve II ](http://www16.ocn.ne.jp/~akiko-y/Egg_by_Itou/index_egg_by_Itou_E.html)
 - [Mathematically defined Easter eggs](http://danielwalsh.tumblr.com/post/2742366331/mathematically-defined-easter-eggs)
