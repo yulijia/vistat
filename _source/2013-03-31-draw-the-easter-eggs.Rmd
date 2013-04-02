@@ -51,8 +51,8 @@ $$R(\theta)=
 \begin{equation}
 \left(
   \begin{array}{cc}
-    \cos\theta & -\sin\theta\\ 
-    \sin\theta & \cos\theta\\  
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta\\
   \end{array}
 \right)
 \end{equation}
@@ -117,7 +117,7 @@ $$
 \begin{equation}
 \left(
   \begin{array}{c}
-    x\\ 
+    x\\
     y\\
     z\\
   \end{array}
@@ -125,8 +125,8 @@ $$
 =
 \left(
   \begin{array}{cc}
-    (1+c\mathscr{v})\cos\mathscr{u}-\sin\mathscr{v}\\ 
-    (1+c\mathscr{v})\sin\mathscr{u} -\cos\mathscr{v}\\ 
+    (1+c\mathscr{v})\cos\mathscr{u}-\sin\mathscr{v}\\
+    (1+c\mathscr{v})\sin\mathscr{u} -\cos\mathscr{v}\\
     b\cos\mathscr{v}\\
   \end{array}
 \right)
