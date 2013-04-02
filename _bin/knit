@@ -33,16 +33,15 @@ invisible(local({
   # each source file corresponds to a separate fig.path and cache.path
   opts_chunk$set(cache.path = paste('cache', base, '', sep = '/'),
                  fig.path = paste(base, '', sep = '/'))
+  server = Sys.getenv('USER') == 'yihui' # only I run the server version
   # generate figures to the ./figure/ directory
-  if (!file.exists('figure/')) dir.create('figure')
-  opts_knit$set(base.dir = normalizePath('figure', mustWork = TRUE))
+  if (!server && !file.exists('figures/')) dir.create('figures')
+  opts_knit$set(base.dir = normalizePath(ifelse(server, 'figure', 'figures'), mustWork = TRUE))
   # save images to R-Forge; I can simply save them to my Dropbox folder, e.g.
   # http://dl.dropbox.com/u/15335397/vistat/ but the problem is that animations
   # do not work well under Google Chrome for some reason (SciAnimator keeps on
   # fetching images from Dropbox)
-  opts_knit$set(base.url = if (as.character(file.info('figure/')[, 'mode']) != '2755') '/figure/' else {
-    'http://isu.r-forge.r-project.org/vistat/'
-  })
+  opts_knit$set(base.url = ifelse(server, 'http://isu.r-forge.r-project.org/vistat/', '/figures/'))
   message(f)
   knit(f, paste('_posts/', base, '.md', sep = ''), envir = globalenv(), quiet = TRUE)
 }))
