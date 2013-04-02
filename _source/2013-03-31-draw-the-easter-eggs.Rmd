@@ -8,6 +8,9 @@ reviewer: [yihui]
 animation: true
 ---
 {% include JB/setup %}
+```{r setup, include=FALSE}
+opts_chunk$set(fig.width=5, fig.height=5)
+```
 
 In this article will show you how to draw a egg with R. I write this article when I learn use [**animation** package](http://yihui.name/animation) for one week. So I will show you the simplest way to draw a animated figure. The only used function is `ani.pause`.
 
