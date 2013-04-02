@@ -11,14 +11,13 @@ animation: true
 ```{r setup, include=FALSE}
 opts_chunk$set(fig.width=5, fig.height=5)
 ```
+This article shows you how to draw a egg with R. I wrote this article after I learned to use the [**animation** package](http://yihui.name/animation) for one week. So I will show you the simplest way to create an animated figure. The only function used in this package is `ani.pause()`.
 
-In this article will show you how to draw a egg with R. I write this article when I learn use [**animation** package](http://yihui.name/animation) for one week. So I will show you the simplest way to draw a animated figure. The only used function is `ani.pause`.
+Let's get started!
 
-Let's begin!
+## A simple egg
 
-## 2d egg
-
-To draw a 2d egg, the function is: 
+The equations that define an egg are:
 
 $$\begin{equation}
 \begin{cases}
@@ -28,7 +27,7 @@ y = b*\cos(\frac{\theta}{4})*\sin(\theta)\\
 \end{cases}
 \end{equation}$$
 
-In the figure below, let's swap the x axis and y axis, then the egg can 'stands'.
+In the figure below, let's swap the x axis and y axis for an egg in the vertical direction.
 
 ```{r draw-egg}
 t = seq(-pi, pi, by = 0.01)
@@ -39,13 +38,7 @@ par(mar=rep(0,4))
 plot(x, y, type = "l", xlim = c(-1, 1), ylim = c(-1, 1), asp = 1, col = "orange1", lwd = 5, axes = FALSE)
 ```
 
-A animation is a sequence of rapidly cycle images. 
-
-`ani.pause()`function is called in an interactive graphics device, it will pause for a time interval (by default specified in `ani.options('interval')`) and flush the current device. We draw a egg with different position in 100 figures, then using `ani.pause()`function when show every figures. You will see the egg 'moving'.
-
-We need a [Rotation matrix](http://en.wikipedia.org/wiki/Rotation_matrix) to draw the rotating egg in a 2d figrue.
-
-The roation matirx is:
+We need a [Rotation matrix](http://en.wikipedia.org/wiki/Rotation_matrix) to draw the rotating egg:
 
 $$R(\theta)=
 \begin{equation}
@@ -57,6 +50,8 @@ $$R(\theta)=
 \right)
 \end{equation}
 $$
+
+The `ani.pause()` function is called to pause for a time interval (by default specified in `ani.options('interval')`) and flush the current device. We draw a egg with with different angles in 30 images, and you will see the egg rotating below:
 
 ```{r rotating-egg, fig.show='animate', interval=.1}
 library(animation)
@@ -79,7 +74,7 @@ par(mar = rep(0, 4))
 egg_rotation()
 ```
 
-Some other example. 
+Another example:
 
 ```{r easter-egg, fig.show='animate', interval=.1}
 library(animation)
@@ -107,11 +102,9 @@ for (j in 1:10) {
 }
 ```
 
-## 3d egg
+## 3D eggs
 
-If you want to draw a 3d egg. Package `rgl` will help you to do it.
-
-The 3d egg is just a perturbation of a sphere. The function is :
+If you want to draw a 3D egg. The **rgl** package can help you do it. The 3D egg is just a perturbation of a sphere. The function is:
 
 $$
 \begin{equation}
