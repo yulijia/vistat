@@ -3,7 +3,7 @@ layout: post
 title: "Draw Easter Eggs"
 author: [yulijia]
 categories: [Animation, Fun]
-tags: [Easter eggs]
+tags: [Easter eggs, rgl]
 reviewer: [yihui]
 animation: true
 ---
