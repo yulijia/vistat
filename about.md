@@ -15,7 +15,7 @@ To start a new article, run
 rake post title="A Title"
 {% endhighlight %}
 
-and you will get an [R Markdown](http://www.rstudio.com/ide/docs/authoring/using_markdown) (Rmd) file under `_source/` named `yyyy-mm-dd-a-title.Rmd`, which is a plain text file and you can edit it with your favorite text editor. At the moment, RStudio has the best support to Rmd files. Here is an [Rmd sample file](https://github.com/yihui/knitr-examples/blob/master/001-minimal.Rmd) and its [output](https://github.com/yihui/knitr-examples/blob/master/001-minimal.md).
+and you will get an [R Markdown](http://www.rstudio.com/ide/docs/authoring/using_markdown) (Rmd) file under `_source/` named `yyyy-mm-dd-a-title.Rmd`, which is a plain text file and you can edit it with your favorite text editor. At the moment, RStudio has the best support for Rmd files. Here is an [Rmd sample file](https://github.com/yihui/knitr-examples/blob/master/001-minimal.Rmd) and its [output](https://github.com/yihui/knitr-examples/blob/master/001-minimal.md).
 
 If you do not have or understand `rake`, just copy an existing Rmd file, rename and open it with a text editor.
 
@@ -47,7 +47,7 @@ You can certainly preview the article inside your editor like RStudio, and the a
 
 ## Preview
 
-If you want to preview your article in the website, you can run
+If you want to preview your articles locally (<http://localhost:4000>), you can run
 
 {% highlight bash %}
 rake preview
@@ -63,11 +63,11 @@ Please commit the source file only (`*.Rmd`) and do not commit the output files 
 
 ## Reviewers
 
-Everyone is welcome to become a reviewer for Vistat. Reviews are public on Github. There are no _anonymous_ reviewers here.
+Everyone is welcome to become a reviewer for Vistat. Reviews are public in the pull requests on Github. There are no _anonymous_ reviewers here.
 
 ## Contributors
 
-We have {{site.authors | size}} contributors:
+We have had {{site.authors | size}} contributors so far:
 
 {% for author in site.authors %}
 - [{{author[1].name}}]({{author[1].homepage}}) {{ author[1].bio }}
