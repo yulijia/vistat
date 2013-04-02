@@ -31,12 +31,12 @@ y = b*\cos(\frac{\theta}{4})*\sin(\theta)\\
 In the figure below, let's swap the x axis and y axis, then the egg can 'stands'.
 
 ```{r draw-egg}
-par(mar = c(3, 3, 1, 1))
 t = seq(-pi, pi, by = 0.01)
 H = 1
 x = H * 0.78 * cos(t/4) * sin(t)
 y = -H * cos(t)
-plot(x, y, type = "l", xlim = c(-2, 2), ylim = c(-2, 2), main = "Draw egg", asp = 1, col = "orange1", lwd = 5)
+par(mar=rep(0,4))
+plot(x, y, type = "l", xlim = c(-1, 1), ylim = c(-1, 1), asp = 1, col = "orange1", lwd = 5, axes = FALSE)
 ```
 
 A animation is a sequence of rapidly cycle images. 
@@ -70,12 +70,12 @@ egg_rotation<- function(H = 1, angle = seq(0,pi*2,0.01), pos = c(0, 0)) {
     y1 = sin(angle[i]) * x + cos(angle[i]) * y + pos[2]
     cols = colors()
     flag = sample(1:length(cols), 1)
-    plot(x1, y1, type = "l", xlim = c(-2, 2), ylim = c(-2, 2), main = "Draw the Easter eggs", asp = 1, col = cols[flag], 
-         lwd = 8)
+    plot(x1, y1, type = "l", xlim = c(-1, 1), ylim = c(-1, 1), asp = 1, col = cols[flag],
+         lwd = 8, axes = FALSE)
     ani.pause(0.00002)
   }
 }
-par(mar = c(3, 3, 1, 1))
+par(mar = rep(0, 4))
 egg_rotation()
 ```
 
@@ -94,14 +94,14 @@ egg <- function(h = rnorm(1), angle = rnorm(1), pos = rnorm(2)) {
     y1 = sin(angle) * x + cos(angle) * y + pos[2]
     cols = colors()
     flag = sample(1:length(cols), 1)
-    plot(x1, y1, type = "l", xlim = c(-2, 2), ylim = c(-2, 2), main = "Draw the Easter eggs", asp = 1, col = cols[flag], 
-         lwd = 8)
+    plot(x1, y1, type = "l", xlim = c(-1, 1), ylim = c(-1, 1), asp = 1, col = cols[flag],
+         lwd = 8, axes = FALSE)
     par(new = TRUE)
   }
   par(new = FALSE)
 }
+par(mar = rep(0, 4))
 for (j in 1:10) {
-  par(mar = c(3, 3, 1, 1))
   egg()
   ani.pause(0.02)
 }
