@@ -72,7 +72,7 @@ egg_rotation = function(H = 1, angle = seq(0,pi*2,length=30), pos = c(0, 0)) {
     flag = sample(1:length(cols), 1)
     plot(x1, y1, type = "l", xlim = c(-1, 1), ylim = c(-1, 1), asp = 1, col = cols[flag],
          lwd = 8, axes = FALSE)
-    ani.pause(0.00002)
+    ani.pause(0.1)
   }
 }
 par(mar = rep(0, 4))
@@ -83,7 +83,7 @@ Some other example.
 
 ```{r easter-egg, fig.show='animate', interval=.1}
 library(animation)
-egg <- function(h = rnorm(1), angle = rnorm(1), pos = rnorm(2)) {
+egg = function(h = rnorm(1), angle = rnorm(1), pos = rnorm(2)) {
   t = seq(-pi, pi, by = 0.01)
   for (i in 1:10) {
     H = h - h/10 * i
@@ -96,14 +96,13 @@ egg <- function(h = rnorm(1), angle = rnorm(1), pos = rnorm(2)) {
     flag = sample(1:length(cols), 1)
     plot(x1, y1, type = "l", xlim = c(-1, 1), ylim = c(-1, 1), asp = 1, col = cols[flag],
          lwd = 8, axes = FALSE)
-    par(new = TRUE)
+    ani.pause(.1)
   }
-  par(new = FALSE)
 }
 par(mar = rep(0, 4))
 for (j in 1:10) {
   egg()
-  ani.pause(0.02)
+  ani.pause(1)
 }
 ```
 
