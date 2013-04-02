@@ -10,7 +10,7 @@ Thumbs.db
 .rvmrc
 
 figure
-figure/
+figures/
 cache/
 _source/figure/
 _source/cache/
