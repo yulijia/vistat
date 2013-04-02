@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Draw the Easter eggs"
+title: "Draw Easter Eggs"
 author: [yulijia]
 categories: [Animation, Fun]
 tags: [Easter eggs]
