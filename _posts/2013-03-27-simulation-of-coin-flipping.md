@@ -9,7 +9,11 @@ animation: true
 ---
 {% include JB/setup %}
 
-The function `flip.coin()` in the [**animation** package](http://yihui.name/animation) provides a simulation to the process of flipping coins and computes the frequencies for `heads` and `tails`. Coin flipping is a well-known [Bernoulli trial](http://en.wikipedia.org/wiki/Bernoulli_trial). When you flip a coin, there are two possible outcomes: `head` or `tail`. A fair coin has the probability 0.5 for `head` by definition.
+The function `flip.coin()` in the [**animation** package](http://yihui.name/animation) provides a
+simulation to the process of flipping coins and computes the frequencies for `heads` and `tails`.
+Coin flipping is a well-known [Bernoulli trial](http://en.wikipedia.org/wiki/Bernoulli_trial). When
+you flip a coin, there are two possible outcomes: `head` or `tail`. A fair coin has the probability
+0.5 for `head` by definition.
 
 ## Head or tail
 
@@ -47,11 +51,14 @@ flip.coin(bg = "yellow")
 </script>
 
 
-Note the outcome is random, so if you run the code above again, you are likely to see different results, but on average you should get 50 heads and 50 tails in the long run.
+Note the outcome is random, so if you run the code above again, you are likely to see different
+results, but on average you should get 50 heads and 50 tails in the long run.
 
 ## Generalization
 
-The coin here does not have to mean a coin literally. We can generalize it to an object that can produce $n$ possible outcomes. For example, three outcomes `Head`, `Stand` (a coin may stand on the table) and `Tail` with probabilities 0.45, 0.1 and 0.45 respectively:
+The coin here does not have to mean a coin literally. We can generalize it to an object that can
+produce $n$ possible outcomes. For example, three outcomes `Head`, `Stand` (a coin may stand on the
+table) and `Tail` with probabilities 0.45, 0.1 and 0.45 respectively:
 
 
 {% highlight r %}

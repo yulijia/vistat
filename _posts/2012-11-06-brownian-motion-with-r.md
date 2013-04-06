@@ -9,13 +9,15 @@ animation: true
 ---
 {% include JB/setup %}
 
-We can use the [**animation** package](http://yihui.name/animation) to produce animations in R. This short article shows you how to create a Brownian motion with the `brownian.motion()` function.
+We can use the [**animation** package](http://yihui.name/animation) to produce animations in R.
+This short article shows you how to create a Brownian motion with the `brownian.motion()` function.
 
 Simply speaking, a Brownian motion shows the trace of the coordinates
 
 $$x_{i+1}=x_{i}+\epsilon_{i+1}$$
 
-where $\epsilon_i$ is i.i.d from a standard Normal distribution. That is fairly easy to program in R -- it is nothing but `cumsum(rnorm(n))`, and that is what `brownian.motion()` does internally.
+where $\epsilon_i$ is i.i.d from a standard Normal distribution. That is fairly easy to program in
+R -- it is nothing but `cumsum(rnorm(n))`, and that is what `brownian.motion()` does internally.
 
 
 {% highlight r %}

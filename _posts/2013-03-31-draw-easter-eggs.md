@@ -10,7 +10,9 @@ animation: true
 {% include JB/setup %}
 
 
-This article shows you how to draw a egg with R. I wrote this article after I learned to use the [**animation** package](http://yihui.name/animation) for one week. So I will show you the simplest way to create an animated figure. The only function used in this package is `ani.pause()`.
+This article shows you how to draw a egg with R. I wrote this article after I learned to use the
+[**animation** package](http://yihui.name/animation) for one week. So I will show you the simplest
+way to create an animated figure. The only function used in this package is `ani.pause()`.
 
 Let's get started!
 
@@ -18,13 +20,8 @@ Let's get started!
 
 The equations that define an egg are:
 
-$$\begin{equation}
-\begin{cases}
-x = a*\cos(\theta)\\
-y = b*\cos(\frac{\theta}{4})*\sin(\theta)\\
-\theta\leq\pi
-\end{cases}
-\end{equation}$$
+$$\begin{equation} \begin{cases} x = a*\cos(\theta)\\ y = b*\cos(\frac{\theta}{4})*\sin(\theta)\\
+\theta\leq\pi \end{cases} \end{equation}$$
 
 In the figure below, let's swap the x axis and y axis for an egg in the vertical direction.
 
@@ -44,18 +41,16 @@ plot(x, y, type = "l", xlim = c(-1, 1), ylim = c(-1, 1), asp = 1,
 
 We need a [Rotation matrix](http://en.wikipedia.org/wiki/Rotation_matrix) to draw the rotating egg:
 
-$$R(\theta)=
-\begin{equation}
-\left(
+$$R(\theta)= \begin{equation} \left(
   \begin{array}{cc}
     \cos\theta & -\sin\theta\\
     \sin\theta & \cos\theta\\
   \end{array}
-\right)
-\end{equation}
-$$
+\right) \end{equation} $$
 
-The `ani.pause()` function is called to pause for a time interval (by default specified in `ani.options('interval')`) and flush the current device. We draw a egg with with different angles in 30 images, and you will see the egg rotating below:
+The `ani.pause()` function is called to pause for a time interval (by default specified in
+`ani.options('interval')`) and flush the current device. We draw a egg with with different angles
+in 30 images, and you will see the egg rotating below:
 
 
 {% highlight r %}
@@ -159,27 +154,22 @@ for (j in 1:10) {
 
 ## 3D eggs
 
-If you want to draw a 3D egg. The **rgl** package can help you do it. The 3D egg is just a perturbation of a sphere. The function is:
+If you want to draw a 3D egg. The **rgl** package can help you do it. The 3D egg is just a
+perturbation of a sphere. The function is:
 
-$$
-\begin{equation}
-\left(
+$$ \begin{equation} \left(
   \begin{array}{c}
     x\\
     y\\
     z\\
   \end{array}
-\right)
-=
-\left(
+\right) = \left(
   \begin{array}{cc}
     (1+c\mathscr{v})\cos\mathscr{u}-\sin\mathscr{v}\\
     (1+c\mathscr{v})\sin\mathscr{u} -\cos\mathscr{v}\\
     b\cos\mathscr{v}\\
   \end{array}
-\right)
-\end{equation}
-$$
+\right) \end{equation} $$
 
 Here we set $c=0.2, b=0.3$.
 

@@ -8,7 +8,10 @@ reviewer: []
 ---
 {% include JB/setup %}
 
-Fonts play an important role in graphics. This article was motivated from a [StackOverflow post](http://stackoverflow.com/q/12675147/559676), and shows how to draw [xkcd](http://xkcd.com) style graphs in R using the [**Cairo** package](http://cran.r-project.org/package=Cairo). Before get started, you need to install the Humor Sans font (please Google it yourself).
+Fonts play an important role in graphics. This article was motivated from a [StackOverflow
+post](http://stackoverflow.com/q/12675147/559676), and shows how to draw [xkcd](http://xkcd.com)
+style graphs in R using the [**Cairo** package](http://cran.r-project.org/package=Cairo). Before
+get started, you need to install the Humor Sans font (please Google it yourself).
 
 ## Set up fonts for R
 
@@ -28,7 +31,8 @@ CairoFonts(
 
 ## Draw it
 
-Now we use the `CairoPNG()` device to save a plot. Because I'm using **knitr**, I only need to specify the chunk option `dev='CairoPNG'` instead of really opening the device in the code below.
+Now we use the `CairoPNG()` device to save a plot. Because I'm using **knitr**, I only need to
+specify the chunk option `dev='CairoPNG'` instead of really opening the device in the code below.
 
 
 {% highlight r %}
@@ -54,11 +58,14 @@ lines(x, -1.5 + runif(length(x), -0.005, 0.005), xpd = NA, lwd = 2)
 ![plot of chunk draw-xkcd](http://isu.r-forge.r-project.org/vistat/2012-11-08-make-xkcd-style-graphs-in-r/draw-xkcd.png) 
 
 
-There are other ways to use additional fonts in R graphics, such as the **tikzDevice** and **extrafonts** package; the former requires knowledge of LaTeX, and the latter is easier to use.
+There are other ways to use additional fonts in R graphics, such as the **tikzDevice** and
+**extrafonts** package; the former requires knowledge of LaTeX, and the latter is easier to use.
 
 ## Acknowledgments
 
-I thank Mark Bulling for the answer under the SO post. I used base R graphics instead of **ggplot2** as Mark did because I think the pen-and-paper model of base R is more natural for drawing such a plot (the grammar of graphics seems to be overkill).
+I thank Mark Bulling for the answer under the SO post. I used base R graphics instead of
+**ggplot2** as Mark did because I think the pen-and-paper model of base R is more natural for
+drawing such a plot (the grammar of graphics seems to be overkill).
 
 ## Session info
 

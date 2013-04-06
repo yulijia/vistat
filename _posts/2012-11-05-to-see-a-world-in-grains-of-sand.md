@@ -8,7 +8,9 @@ reviewer: []
 ---
 {% include JB/setup %}
 
-This article was borrowed from my [blog post](http://yihui.name/en/2008/09/to-see-a-circle-in-a-pile-of-sand/) to show how to visualize a large amount of data in scatter plots. Here is how the original data was generated:
+This article was borrowed from my [blog
+post](http://yihui.name/en/2008/09/to-see-a-circle-in-a-pile-of-sand/) to show how to visualize a
+large amount of data in scatter plots. Here is how the original data was generated:
 
 
 {% highlight r %}
@@ -97,7 +99,8 @@ with(x, plot(hexbin(V1, V2)))
 
 ## 2D kernel density estimation
 
-We can estimate the two-dimensional density surface using the `kde2d()` function in the **MASS** package:
+We can estimate the two-dimensional density surface using the `kde2d()` function in the **MASS**
+package:
 
 
 {% highlight r %}
@@ -110,7 +113,8 @@ persp(fit$x, fit$y, fit$z)
 ![plot of chunk plot-kde2d](http://isu.r-forge.r-project.org/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-kde2d.png) 
 
 
-That is only a static plot, and we can actually interact with the surface (e.g. rotating and zooming) if we draw it with the **rgl** package:
+That is only a static plot, and we can actually interact with the surface (e.g. rotating and
+zooming) if we draw it with the **rgl** package:
 
 
 {% highlight r %}
@@ -135,6 +139,7 @@ play3d(par3dinterp(userMatrix = list(M, rotate3d(M, pi/2, 1, 0, 0),
 {% endhighlight %}
 
 
-<iframe src="http://player.vimeo.com/video/4745847" width="500" height="465" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+<iframe src="http://player.vimeo.com/video/4745847" width="500" height="465" frameborder="0"
+webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 Please let me know if you have other ideas.

@@ -9,13 +9,21 @@ d3: true
 ---
 {% include JB/setup %}
 
-[D3](https://github.com/mbostock/d3) is a popular JavaScript library to draw graphics on the web. Powerful as it is, I often feel it is limited to me as a statistician, especially a statistician spoiled by [R](http://www.r-project.org) -- in which I can draw plots without thinking of primitives such as points, lines, segments and so on, and all kinds of statistical functions are there for me to call. In this article I explain how to combine R and D3 to draw a contour plot.
+[D3](https://github.com/mbostock/d3) is a popular JavaScript library to draw graphics on the web.
+Powerful as it is, I often feel it is limited to me as a statistician, especially a statistician
+spoiled by [R](http://www.r-project.org) -- in which I can draw plots without thinking of
+primitives such as points, lines, segments and so on, and all kinds of statistical functions are
+there for me to call. In this article I explain how to combine R and D3 to draw a contour plot.
 
 ## Computing in R
 
 ![](http://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Mount_Eden.jpg/320px-Mount_Eden.jpg)
 
-The computation of contour lines can be challenging to JavaScript but is extremely easy with R using the `contourLines()` function, so we pre-process the data and make it ready to JavaScript. We make use of the good old `volcano` dataset here and draw a contour plot to visualize the altitude corresponding to a grid of latitudes and longitudes (the picture above of the volcano is from [Wikipedia](http://en.wikipedia.org/wiki/Mount_Eden)).
+The computation of contour lines can be challenging to JavaScript but is extremely easy with R
+using the `contourLines()` function, so we pre-process the data and make it ready to JavaScript. We
+make use of the good old `volcano` dataset here and draw a contour plot to visualize the altitude
+corresponding to a grid of latitudes and longitudes (the picture above of the volcano is from
+[Wikipedia](http://en.wikipedia.org/wiki/Mount_Eden)).
 
 
 {% highlight r %}
@@ -38,7 +46,8 @@ str(res[1:2])  # first two elements of the list
 {% endhighlight %}
 
 
-We can see the results returned by `contourLines()` is a list of sub-lists: each sub-list contains the x-y coordinates of polylines. Now we convert this list to a JSON array of the form:
+We can see the results returned by `contourLines()` is a list of sub-lists: each sub-list contains
+the x-y coordinates of polylines. Now we convert this list to a JSON array of the form:
 
 {% highlight js %}
 [
@@ -52,7 +61,7 @@ We can see the results returned by `contourLines()` is a list of sub-lists: each
 },
 ...
 ]
-{% endhighlight%}
+{% endhighlight %}
 
 And write the data to a `script` tag:
 
@@ -154,8 +163,7 @@ var data = [{
 
 Now we are ready to call D3 to draw all the lines (see the HTML source code of this page):
 
-<div id="volcano" style="text-align: center;">
-</div>
+<div id="volcano" style="text-align: center;"></div>
 
 <script type="text/javascript">
 var width = 500, height = 300;
@@ -197,7 +205,8 @@ var svg = d3.select("#volcano").append("svg")
       .style("stroke-width", 2);
 </script>
 
-This is indeed a plot drawn by D3; if you do not believe it, mouse over the lines and you will see them highlighted in yellow, or refresh this page to see line width transition from 0 to 2.
+This is indeed a plot drawn by D3; if you do not believe it, mouse over the lines and you will see
+them highlighted in yellow, or refresh this page to see line width transition from 0 to 2.
 
 With R, it is just one line of code but it is a static plot (not interactive):
 
@@ -211,4 +220,7 @@ contour(volcano, col = "darkgreen", lwd = 2)
 
 ## Conclusion
 
-It is rare that we solve a problem with a single tool. Take the advantages of all tools instead of blindly believing that one ring will rule them all. R is good for statistical computing and graphics, and D3 is awesome for the web. Both are good in one way but weak in another, so let's make `1 + 1 > 2`.
+It is rare that we solve a problem with a single tool. Take the advantages of all tools instead of
+blindly believing that one ring will rule them all. R is good for statistical computing and
+graphics, and D3 is awesome for the web. Both are good in one way but weak in another, so let's
+make `1 + 1 > 2`.

@@ -9,11 +9,15 @@ animation: true
 ---
 {% include JB/setup %}
 
-In the [**animation** package](http://yihui.name/animation), there is a function named `grad.desc()`. It provides a visual illustration for the process of minimizing a real-valued function through the [Gradient Descent Algorithm](http://en.wikipedia.org/wiki/Gradient_descent). The two examples below show you how to use the `grad.desc()` function.
+In the [**animation** package](http://yihui.name/animation), there is a function named
+`grad.desc()`. It provides a visual illustration for the process of minimizing a real-valued
+function through the [Gradient Descent Algorithm](http://en.wikipedia.org/wiki/Gradient_descent).
+The two examples below show you how to use the `grad.desc()` function.
 
 ## A simple function
 
-The default objective function in `grad.desc()` is $$f(x,y)=x{^2}+2y{^2}$$. The arrows will take you to the minima step by step:
+The default objective function in `grad.desc()` is $$f(x,y)=x{^2}+2y{^2}$$. The arrows will take
+you to the minima step by step:
 
 
 {% highlight r %}
@@ -93,4 +97,5 @@ grad.desc(f2, c(-2, -2, 2, 2), c(-1, 0.5), gamma = 0.3, tol = 1e-04)
 </script>
 
 
-Apparently the arrows get lost eventually. You can replace `gamma=0.3` with a smaller value and retry the function.
+Apparently the arrows get lost eventually. You can replace `gamma=0.3` with a smaller value and
+retry the function.
