@@ -36,7 +36,7 @@ We can see the results returned by `contourLines()` is a list of sub-lists: each
 },
 ...
 ]
-{% endhighlight%}
+{% endhighlight %}
 
 And write the data to a `script` tag:
 
@@ -56,8 +56,7 @@ cat('<script>',
 
 Now we are ready to call D3 to draw all the lines (see the HTML source code of this page):
 
-<div id="volcano" style="text-align: center;">
-</div>
+<div id="volcano" style="text-align: center;"></div>
 
 <script type="text/javascript">
 var width = 500, height = 300;
