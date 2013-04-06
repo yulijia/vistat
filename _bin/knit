@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-stopifnot(packageVersion('knitr') >= '1.1.9')
+stopifnot(packageVersion('knitr') >= '1.1.12')
 # install dependencies
 for (i in setdiff(c(
   'Cairo',
@@ -43,5 +43,6 @@ invisible(local({
   # fetching images from Dropbox)
   opts_knit$set(base.url = ifelse(server, 'http://isu.r-forge.r-project.org/vistat/', '/figures/'))
   message(f)
+  wrap_rmd(f, width = 100)  # reflow long lines in Rmd
   knit(f, paste('_posts/', base, '.md', sep = ''), envir = globalenv(), quiet = TRUE)
 }))
