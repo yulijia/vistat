@@ -106,7 +106,7 @@ desc "Knit all Rmd files for the server"
 task :knit do
   # if figure/ is empty, mount the r-forge dir
   system '[ "$(ls -A figure)" ] || sshfs yihui@r-forge.r-project.org:/srv/gforge/chroot/home/groups/isu/htdocs/vistat figure'
-  system "find ./_source -type f -iname *.Rmd | xargs -n1 -P4 ./_bin/knit"
+  system "find ./_source -type f -iname *.Rmd | grep -E '_source/[0-9]+' | xargs -n1 -P4 ./_bin/knit"
 end # task :knit
 
 # Public: Alias - Maintains backwards compatability for theme switching.
