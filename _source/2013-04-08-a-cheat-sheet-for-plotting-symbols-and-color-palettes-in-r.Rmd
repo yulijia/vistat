@@ -9,8 +9,8 @@ reviewer: [yihui]
 {% include JB/setup %}
 
 This cheat sheet shows how many plottins symbols and color palettes in R. Now you do not need ask
-others the plotting symbols and color palettes questions again, just save this cheat sheet to you
-favourite, everything gets ready:)
+others the plotting symbols and color palettes questions again, just save this cheat sheet to your
+favorite folder, everything gets ready:)
 
 ## Plotting symbols (pch)
 
