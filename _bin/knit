@@ -6,7 +6,8 @@ for (i in setdiff(c(
   'Cairo',
   'animation',
   'knitr',
-  'hexbin'
+  'hexbin',
+  'RColorBrewer'
 ), .packages(TRUE))) {
   install.packages(i)
 }
