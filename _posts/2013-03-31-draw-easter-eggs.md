@@ -10,7 +10,7 @@ animation: true
 {% include JB/setup %}
 
 
-This article shows you how to draw a egg with R. I wrote this article after I learned to use the
+This article shows you how to draw an egg with R. I wrote this article after I learned to use the
 [**animation** package](http://yihui.name/animation) for one week. So I will show you the simplest
 way to create an animated figure. The only function used in this package is `ani.pause()`.
 
