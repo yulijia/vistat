@@ -59,10 +59,12 @@ pie(rep(1, length(pal)), labels=sprintf('%d (%s)', seq_along(pal),pal), col=pal)
 
 The color palettes in **RColorBrewer**:
 
-```{r brewer-pal}
+```{r brewer-pal, fig.height=9}
 library(RColorBrewer)
 par(mar=c(0,4,0,0))
 display.brewer.all()
+# generate 8 colors from the Set2 palette
+brewer.pal(8, 'Set2')
 ```
 
 We can set R colors by name, or by index in the `colors()` vector. Function `colors()` returns a
