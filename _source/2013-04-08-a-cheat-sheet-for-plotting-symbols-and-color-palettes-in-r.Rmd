@@ -1,0 +1,72 @@
+---
+layout: post
+title: "A Cheat Sheet for Plotting Symbols and Color Palettes in R"
+author: [yihui, yulijia]
+categories: [Graphical Parameters]
+tags: [Plotting Symbols, Color Palettes]
+reviewer: [yihui]
+---
+{% include JB/setup %}
+
+This cheat sheet shows how many plottins symbols and color palettes in R. Now you do not need ask
+others the plotting symbols and color palettes questions again, just save this cheat sheet to you
+favourite, everything gets ready:)
+
+## Plotting symbols (pch)
+
+There’s a rich variety of plotting symbols in the **graphics** package. We can set `pch` parameter
+to change plotting symbols. See `?points` for more information.
+
+This script creates a figure containing the standard plot symbols along with some character-based
+plot symbols.
+
+```{r pch, fig.height=5}
+# taken from example(points)
+pchShow = function(extras = c("*",".", "o","O","0","+","-","|","%","#"), cex = 3,
+                   col = "red3", bg = "gold", coltext = "brown", cextext = 1.2) {
+  nex <- length(extras)
+  np  <- 26 + nex
+  ipch <- 0:(np-1)
+  k <- floor(sqrt(np))
+  dd <- c(-1,1)/2
+  rx <- dd + range(ix <- ipch %/% k)
+  ry <- dd + range(iy <- 3 + (k-1)- ipch %% k)
+  pch <- as.list(ipch) # list with integers & strings
+  if(nex > 0) pch[26+ 1:nex] <- as.list(extras)
+  par(mar=rep(0,4))
+  plot(rx, ry, type = "n", axes  =  FALSE, xlab = "", ylab = "")
+  abline(v = ix, h = iy, col = "lightgray", lty = "dotted")
+  for(i in 1:np) {
+    pc <- pch[[i]]
+    ## 'col' symbols with a 'bg'-colored interior (where available) :
+    points(ix[i], iy[i], pch = pc, col = col, bg = bg, cex = cex)
+    if(cextext > 0)
+      text(ix[i] - 0.3, iy[i], pc, col = coltext, cex = cextext)
+    }
+  }
+pchShow()
+```
+
+## Color palettes
+
+The default color palette in R:
+
+```{r default-pal, fig.width=5, fig.height=5}
+(pal = palette())
+par(mar=rep(0,4))
+pie(rep(1, length(pal)), labels=sprintf('%d (%s)', seq_along(pal),pal), col=pal)
+```
+
+The color palettes in **RColorBrewer**:
+
+```{r brewer-pal}
+library(RColorBrewer)
+par(mar=c(0,4,0,0))
+display.brewer.all()
+```
+
+We can set R colors by name, or by index in the `colors()` vector. Function `colors()` returns a
+vector of 657 color names in R.
+
+Still need more? See [color
+chart](http://research.stowers-institute.org/efg/R/Color/Chart/ColorChart.pdf).
