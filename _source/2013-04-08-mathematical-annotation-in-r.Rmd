@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Mathematical Annotation in R"
+author: [yihui, yulijia]
+categories: [Graphical Parameters]
+tags: [Mathematical Annotation]
+reviewer: [yihui]
+---
+{% include JB/setup %}
+
+A graph with mathematical symbols and formulas are very useful in some cases. R function
+`expression` can format mathematical anotations to LaTeX style. Expressions can also be used for
+titles, subtitles and x- and y-axis labels (but not for axis labels on persp plots.
+
+## Mathematical annotation in R
+
+```{r demo-plotmath, eval=FALSE}
+demo(plotmath)
+```
+
+```{r read-plotmath, cache=FALSE, include=FALSE}
+read_demo('plotmath', package='graphics', labels='plotmath')
+```
+
+```{r plotmath, echo=FALSE, results='hide'}
+```
