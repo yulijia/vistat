@@ -1,24 +1,27 @@
 ---
 layout: post
-title: "A Cheat Sheet for Plotting Symbols and Color Palettes in R"
+title: "Cheat Sheets for Plotting Symbols and Color Palettes"
 author: [yihui, yulijia]
-categories: [Graphical Parameters]
-tags: [Plotting Symbols, Color Palettes]
+categories: [Base Graphics, Color]
+tags: [plotting Symbols, color palettes, graphical parameters, RColorBrewer]
 reviewer: []
 ---
 {% include JB/setup %}
 
-This cheat sheet shows how many plottins symbols and color palettes in R. Now you do not need ask
-others the plotting symbols and color palettes questions again, just save this cheat sheet to your
-favorite folder, everything gets ready:)
+This cheat sheet shows a few commonly used plotting symbols and color palettes in R. Now you do not
+need to memorize the facts like "19 is the big solid dot and 21 is an open circle that can have a
+different background color" -- just bookmark this cheat sheet. In fact it was motivated by Dr
+[Rafael Irizarry](http://rafalab.jhsph.edu/), who printed the color palettes on a piece of paper
+and pinned that to the wall in his office.
 
 ## Plotting symbols (pch)
 
-There’s a rich variety of plotting symbols in the **graphics** package. We can set `pch` parameter
-to change plotting symbols. See `?points` for more information.
+There are many plotting symbols in the **graphics** package. We can set the `pch` parameter to set
+the symbols. See `?points` for more information.
 
-This script creates a figure containing the standard plot symbols along with some character-based
-plot symbols.
+Below is a figure containing the plot symbols from `pch = 0` to `25` along with some
+character-based plot symbols. We can use, for example, `plot(x, y, pch = 3)` for plus signs (`+`)
+in a scatterplot.
 
 ```{r pch, fig.height=5, echo=FALSE}
 # taken from example(points)
@@ -57,7 +60,9 @@ par(mar=rep(0,4))
 pie(rep(1, length(pal)), labels=sprintf('%d (%s)', seq_along(pal),pal), col=pal)
 ```
 
-The color palettes in **RColorBrewer**:
+Below are the color palettes in **RColorBrewer** (if you do not want to use **ggplot2**, you should
+consider using this package to generate colors for your plots; just do not use the meaningless
+`rainbow()` palette):
 
 ```{r brewer-pal, fig.height=9}
 library(RColorBrewer)
@@ -67,8 +72,7 @@ display.brewer.all()
 brewer.pal(8, 'Set2')
 ```
 
-We can set R colors by name, or by index in the `colors()` vector. Function `colors()` returns a
-vector of 657 color names in R.
-
-Still need more? See [color
-chart](http://research.stowers-institute.org/efg/R/Color/Chart/ColorChart.pdf).
+In R, the function `colors()` returns a vector of `r length(colors())` color names. When you really
+need to specify the color by its name, you are recommended to check out this nice [color
+chart](http://research.stowers-institute.org/efg/R/Color/Chart/ColorChart.pdf) created by Earl F.
+Glynn.
