@@ -20,7 +20,7 @@ to change plotting symbols. See `?points` for more information.
 This script creates a figure containing the standard plot symbols along with some character-based
 plot symbols.
 
-```{r pch, fig.height=5}
+```{r pch, fig.height=5, echo=FALSE}
 # taken from example(points)
 pchShow = function(extras = c("*",".", "o","O","0","+","-","|","%","#"), cex = 3,
                    col = "red3", bg = "gold", coltext = "brown", cextext = 1.2) {
