@@ -388,6 +388,10 @@ ul.author {
     margin:0;
   }
   
+  div.banner {
+    display: none;
+  }
+
   header, section, footer {
     float:none;
     position:static;
