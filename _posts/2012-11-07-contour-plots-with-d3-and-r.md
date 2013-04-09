@@ -3,7 +3,7 @@ layout: post
 title: "Contour Plots with D3 and R"
 author: [yihui]
 categories: [JavaScript, R language]
-tags: [D3, Contour plot]
+tags: [D3, contour plot]
 reviewer: []
 d3: true
 ---

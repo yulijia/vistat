@@ -3,7 +3,7 @@ layout: post
 title: "Simulation of Coin Flipping"
 author: [yulijia]
 categories: [Animation, Probability]
-tags: [Coin flipping, Bernoulli trial]
+tags: [coin flipping, Bernoulli trial]
 reviewer: [yihui]
 animation: true
 ---

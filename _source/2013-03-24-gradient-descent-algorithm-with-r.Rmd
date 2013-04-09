@@ -3,7 +3,7 @@ layout: post
 title: "Demonstration of the Gradient Descent Algorithm"
 author: [yulijia]
 categories: [Animation, Computational Statistics]
-tags: [Gradient descent algorithm]
+tags: [gradient descent algorithm]
 reviewer: [yihui]
 animation: true
 ---
