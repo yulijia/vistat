@@ -2,8 +2,8 @@
 layout: post
 title: "To See a World in Grains of Sand"
 author: [yihui]
-categories: [Big data]
-tags: [scatterplot, hexbin, alpha-transparency, overplotting, 2D kernel density estimation]
+categories: [Big data, Color, Base Graphics]
+tags: [plotting symbols, scatterplot, graphical parameters, hexbin, alpha-transparency, overplotting, 2D kernel density estimation]
 reviewer: []
 ---
 {% include JB/setup %}
