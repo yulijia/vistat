@@ -9,8 +9,7 @@ reviewer: [yihui]
 {% include JB/setup %}
 
 A graph with mathematical symbols and formulas are very useful in some cases. R function
-`expression` can format mathematical anotations to LaTeX style. Expressions can also be used for
-titles, subtitles and x- and y-axis labels (but not for axis labels on persp plots.
+`expression` can format mathematical anotations to LaTeX style. 
 
 ## Mathematical annotation in R
 
