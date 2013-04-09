@@ -4,7 +4,7 @@ title: "Mathematical Annotation in R"
 author: [yihui, yulijia]
 categories: [Graphical Parameters]
 tags: [Mathematical Annotation]
-reviewer: [yihui]
+reviewer: []
 ---
 {% include JB/setup %}
 

@@ -4,7 +4,7 @@ title: "A Cheat Sheet for Plotting Symbols and Color Palettes in R"
 author: [yihui, yulijia]
 categories: [Graphical Parameters]
 tags: [Plotting Symbols, Color Palettes]
-reviewer: [yihui]
+reviewer: []
 ---
 {% include JB/setup %}
 
