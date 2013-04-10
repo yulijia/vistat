@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mathematical Annotation in R"
-author: [rcore, yihui, yulijia]
+author: [rcore, yulijia]
 categories: [Base Graphics]
 tags: [mathematical annotation, Greek letters]
 reviewer: []
@@ -10,7 +10,8 @@ reviewer: []
 
 Want to write mathematical symbols and expressions in R graphics? You can use an R `expression()`
 instead of normal text, e.g. `plot(1:10, main = expression(alpha + beta))`. Below is a demo that
-shows you everything about plotting math in R:
+shows you everything about plotting math in R (it was written by the R Core Team; see `?plotmath`
+for details):
 
 
 {% highlight r %}
