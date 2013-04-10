@@ -27,6 +27,11 @@ authors:
     github: cboettig
     twitter: cboettig
     bio: A post-doctoral researcher with Marc Mangel and Steve Munch in the Center for Stock Assessment Research, at UC Santa Cruz, working on regime shifts in ecology and evolution.
+  rcore:
+    name: R Core Team
+    email: R-core@R-project.org
+    homepage: http://www.r-project.org
+    bio: The R Project for Statistical Computing.
   taiyun:
     name: Taiyun Wei
     email: taiyun.wei@cos.name

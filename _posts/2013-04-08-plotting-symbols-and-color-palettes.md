@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cheat Sheets for Plotting Symbols and Color Palettes"
-author: [yihui, yulijia]
+author: [rcore, yihui, yulijia]
 categories: [Base Graphics, Color]
 tags: [plotting symbols, color palettes, graphical parameters, RColorBrewer]
 reviewer: []

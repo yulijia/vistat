@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mathematical Annotation in R"
-author: [yihui, yulijia]
+author: [rcore, yihui, yulijia]
 categories: [Base Graphics]
 tags: [mathematical annotation, Greek letters]
 reviewer: []
