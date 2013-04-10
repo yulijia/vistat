@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mathematical Annotation in R"
-author: [rcore, yulijia]
+author: [rcore, yulijia, kbroman]
 categories: [Base Graphics]
 tags: [mathematical annotation, Greek letters]
 reviewer: []
@@ -22,12 +22,11 @@ read_demo('plotmath', package='graphics', labels='plotmath')
 ```{r plotmath, echo=FALSE, results='hide', dpi=90, crop=TRUE}
 ```
 
-Combining expressions and text
-------------------------------
+## Combining expressions and text
 
 If you want to combine multiple mathematical expressions with text, use `paste` _inside_ `expression`, as in the following.
 
-```{r anexample, cache=FALSE}
+```{r anexample}
  plot(rnorm(100), rnorm(100),
       xlab=expression(hat(mu)[0]),
       ylab=expression(alpha^beta),
