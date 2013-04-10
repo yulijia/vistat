@@ -21,3 +21,15 @@ read_demo('plotmath', package='graphics', labels='plotmath')
 ```
 ```{r plotmath, echo=FALSE, results='hide', dpi=90, crop=TRUE}
 ```
+
+Combining expressions and text
+------------------------------
+
+If you want to combine multiple mathematical expressions with text, use `paste` _inside_ `expression`, as in the following.
+
+```{r anexample, cache=FALSE}
+ plot(rnorm(100), rnorm(100),
+      xlab=expression(hat(mu)[0]),
+      ylab=expression(alpha^beta),
+      main=expression(paste("Plot of ", alpha^beta, " versus ", hat(mu)[0])))
+```
