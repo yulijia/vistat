@@ -24,7 +24,8 @@ read_demo('plotmath', package='graphics', labels='plotmath')
 
 ## Combining expressions and text
 
-If you want to combine multiple mathematical expressions with text, use `paste` _inside_ `expression`, as in the following.
+If you want to combine multiple mathematical expressions with text, use `paste` _inside_
+`expression`, as in the following.
 
 ```{r math-text, fig.width=5, fig.height=4, tidy=FALSE}
 par(mar=c(4, 4, 2, .1))
