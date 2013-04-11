@@ -53,6 +53,13 @@ authors:
     github: yulijia
     twitter: YuLijia
     bio: A master candidate majoring in Bioinformatics at Beijing Institute of Genomics.
+  kbroman:
+    name: Karl Broman
+    email: kbroman@biostat.wisc.edu
+    homepage: http://www.biostat.wisc.edu/~kbroman
+    github: kbroman
+    twitter: kwbroman
+    bio: Department of Biostatistics and Medical Informatics, University of Wisconsin-Madison; research in statistical genetics; developer of R/qtl (for R)
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
