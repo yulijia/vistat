@@ -4,7 +4,7 @@ title: "Mathematical Annotation in R"
 author: [rcore, yulijia, kbroman]
 categories: [Base Graphics]
 tags: [mathematical annotation, Greek letters]
-reviewer: []
+reviewer: [yihui]
 ---
 {% include JB/setup %}
 
