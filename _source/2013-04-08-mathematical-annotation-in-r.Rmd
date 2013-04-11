@@ -28,8 +28,8 @@ If you want to combine multiple mathematical expressions with text, use `paste` 
 `expression`, as in the following.
 
 ```{r math-text, fig.width=5, fig.height=4, tidy=FALSE}
-par(mar=c(4, 4, 2, .1))
+par(mar = c(4, 4, 2, 0.1))
 plot(rnorm(100), rnorm(100),
-  xlab=expression(hat(mu)[0]), ylab=expression(alpha^beta),
-  main=expression(paste("Plot of ", alpha^beta, " versus ", hat(mu)[0])))
+  xlab = expression(hat(mu)[0]), ylab = expression(alpha^beta),
+  main = expression(paste("Plot of ", alpha^beta, " versus ", hat(mu)[0])))
 ```
