@@ -24,8 +24,8 @@ read_demo('plotmath', package='graphics', labels='plotmath')
 
 ## Combining expressions and text
 
-If you want to combine multiple mathematical expressions with text, use `paste` _inside_
-`expression`, as in the following.
+If you want to combine multiple mathematical expressions with text, use `paste()` _inside_
+`expression()`, as in the following.
 
 ```{r math-text, fig.width=5, fig.height=4, tidy=FALSE}
 par(mar = c(4, 4, 2, 0.1))
@@ -34,8 +34,8 @@ plot(rnorm(100), rnorm(100),
   main = expression(paste("Plot of ", alpha^beta, " versus ", hat(mu)[0])))
 ```
 
-Finally, if we want to include variables from an R session in mathematical 
-expressions, and substitute in their actual values, we can use `substitute`.
+Finally, if we want to include variables from an R session in mathematical expressions, and
+substitute in their actual values, we can use `substitute()`.
 
 ```{r math-text-sub, fig.width=6, fig.height=4, tidy=FALSE}
 par(mar = c(4, 4, 2, 0.1))
