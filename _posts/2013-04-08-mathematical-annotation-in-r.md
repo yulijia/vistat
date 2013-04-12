@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Mathematical Annotation in R"
-author: [rcore, yulijia, kbroman]
+author: [rcore, yulijia, kbroman, kushey]
 categories: [Base Graphics]
 tags: [mathematical annotation, Greek letters]
-reviewer: []
+reviewer: [yihui]
 ---
 {% include JB/setup %}
 
@@ -25,8 +25,8 @@ demo(plotmath)
 
 ## Combining expressions and text
 
-If you want to combine multiple mathematical expressions with text, use `paste` _inside_
-`expression`, as in the following.
+If you want to combine multiple mathematical expressions with text, use `paste()` _inside_
+`expression()`, as in the following.
 
 
 {% highlight r %}
@@ -37,4 +37,23 @@ plot(rnorm(100), rnorm(100),
 {% endhighlight %}
 
 ![plot of chunk math-text](http://isu.r-forge.r-project.org/vistat/2013-04-08-mathematical-annotation-in-r/math-text.png) 
+
+
+Finally, if we want to include variables from an R session in mathematical expressions, and
+substitute in their actual values, we can use `substitute()`.
+
+
+{% highlight r %}
+par(mar = c(4, 4, 2, 0.1))
+x_mean <- 1.5
+x_sd <- 1.2
+hist(rnorm(100, x_mean, x_sd),
+  main = substitute(
+    paste("Histogram of 100 samples from X ~ N(", mu, ", ", s^2, ")"),
+    list(mu = x_mean, s = x_sd)
+  )
+)
+{% endhighlight %}
+
+![plot of chunk math-text-sub](http://isu.r-forge.r-project.org/vistat/2013-04-08-mathematical-annotation-in-r/math-text-sub.png) 
 
