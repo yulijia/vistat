@@ -41,15 +41,10 @@ expressions, and substitute in their actual values, we can use `substitute`.
 par( mar=c(4, 4, 2, 0.1) )
 x_mean <- 1.5
 x_sd <- 1.2
-hist( rnorm(100, x_mean, x_sd),
-      main=as.expression( substitute( 
-        expr=paste(
-          "Histogram of 100 samples from X ~ N(", x_mean, ", ", x_sd^2, ")"
-        ), 
-        env=list(
-          x_mean=x_mean, 
-          x_sd=x_sd
-        ) 
-      ) )
+hist(rnorm(100, x_mean, x_sd),
+  main = substitute(
+    paste("Histogram of 100 samples from X ~ N(", mu, ", ", s^2, ")"),
+    list(mu = x_mean, s = x_sd)
+  )
 )
 ```
