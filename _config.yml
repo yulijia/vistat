@@ -60,6 +60,13 @@ authors:
     github: kbroman
     twitter: kwbroman
     bio: Department of Biostatistics and Medical Informatics, University of Wisconsin-Madison; research in statistical genetics; developer of R/qtl (for R)
+  kushey:
+    name: Kevin Ushey
+    email: kevinushey@gmail.com
+    homepage: http://cdrv.github.io
+    github: cdrv
+    twitter: kevin_ushey
+    bio: MSc., University of British Columbia; interested in statistical genetics and data visualization
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
