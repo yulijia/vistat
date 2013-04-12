@@ -4,7 +4,7 @@
   {% for id in page.author %}{% assign author = site.authors[id] %}
     <li>{% if author %}
     <a href="{{ author.homepage }}">{{ author.name }}</a>
-      ({{ author.email | replace:'@','<span>@</span>' }}{% if author.github %} / <a href="https://github.com/{{ author.github }}">Github</a>{% endif %}
+      ({{ author.email | replace:'@','<span>@</span>' }}{% if author.github %} / <a href="https://github.com/{{ author.github }}">GitHub</a>{% endif %}
       {% if author.twitter %} / <a href="http://twitter.com/{{ author.twitter }}">Twitter</a>{% endif %}) {{ author.bio | markdownify | replace:'<p>','' | replace:'</p>','' }}
     {% else %}
     Please specify author information for {{ id }} in <a href="https://github.com/supstat/vistat/blob/gh-pages/_config.yml">_config.yml</a>.
@@ -32,7 +32,7 @@
     {% endfor %}
     </ul>
     {% endif %}
-    You can find the R Markdown source document in the <a href="https://github.com/supstat/vistat/tree/gh-pages/_source/{{ page.date | date:'%Y-%m-%d'}}-{{ page.url | split:'/' | last }}.Rmd">vistat repository</a> on Github.
+    You can find the R Markdown source document in the <a href="https://github.com/supstat/vistat/tree/gh-pages/_source/{{ page.date | date:'%Y-%m-%d'}}-{{ page.url | split:'/' | last }}.Rmd">vistat repository</a> on GitHub.
   </div>
   {% include JB/comments %}
 </section>

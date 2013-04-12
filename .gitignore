@@ -15,3 +15,5 @@ cache/
 _source/figure/
 _source/cache/
 _source/__*
+.Rproj.user
+*.Rproj
