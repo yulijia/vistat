@@ -37,8 +37,8 @@ plot(rnorm(100), rnorm(100),
 Finally, if we want to include variables from an R session in mathematical 
 expressions, and substitute in their actual values, we can use `substitute`.
 
-```{r math-text-sub, fig.width=5, fig.height=4, tidy=FALSE}
-par( mar=c(4, 4, 2, 0.1) )
+```{r math-text-sub, fig.width=6, fig.height=4, tidy=FALSE}
+par(mar = c(4, 4, 2, 0.1))
 x_mean <- 1.5
 x_sd <- 1.2
 hist(rnorm(100, x_mean, x_sd),
