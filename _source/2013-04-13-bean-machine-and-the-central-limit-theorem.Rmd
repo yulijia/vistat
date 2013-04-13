@@ -20,7 +20,7 @@ balls bounce left and right as they hit the pins. You can see the height of ball
 bins approximates a [bell curve](http://en.wikipedia.org/wiki/Normal_distribution).
 
 
-```{r bean-machine, fig.show='animate', interval=.03}
+```{r bean-machine, fig.show='animate', interval=.05}
 library(animation)
 ani.options(interval = 0.03, nmax = 213) # It's strongly recommended that ani.options(nmax = balls+ layers -2)
 quincunx()
