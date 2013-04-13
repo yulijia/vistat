@@ -49,8 +49,8 @@ x_mean <- 1.5
 x_sd <- 1.2
 hist(rnorm(100, x_mean, x_sd),
   main = substitute(
-    paste("Histogram of 100 samples from X ~ N(", mu, ", ", s^2, ")"),
-    list(mu = x_mean, s = x_sd)
+    paste(X[i], " ~ N(", mu, "=", m, ", ", sigma^2, "=", s2, ")"),
+    list(m = x_mean, s2 = x_sd^2)
   )
 )
 {% endhighlight %}
