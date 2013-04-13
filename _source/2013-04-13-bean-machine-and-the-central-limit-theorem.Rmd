@@ -22,6 +22,6 @@ bins approximates a [bell curve](http://en.wikipedia.org/wiki/Normal_distributio
 
 ```{r bean-machine, fig.show='animate', interval=.03}
 library(animation)
-ani.options(interval = 0.03, nmax = 500)
+ani.options(interval = 0.03, nmax = 213) # It's strongly recommended that ani.options(nmax = balls+ layers -2)
 quincunx()
 ```
