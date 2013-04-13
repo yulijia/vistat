@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Bean machine and the central limit theorem"
+author: [yulijia]
+categories: [Animation, Probability]
+tags: [bean machine, central limit theorem]
+reviewer: [yihui]
+animation: true
+---
+{% include JB/setup %}
+
+The bean machine, also known as the quincunx or Galton box, is a device invented by Sir [Francis
+Galton](http://en.wikipedia.org/wiki/Francis_Galton) to demonstrate the [central limit
+theorem](http://en.wikipedia.org/wiki/Central_limit_theorem), in particular that the normal
+distribution is approximate to the binomial distribution, or properly speaking, [de Moivre–Laplace
+theorem](http://en.wikipedia.org/wiki/De_Moivre%E2%80%93Laplace_theorem).
+
+The function `quincunx()` in the [**animation** package](http://yihui.name/animation) shows you how
+balls bounce left and right as they hit the pins. You can see the height of ball columns in the
+bins approximates a [bell curve](http://en.wikipedia.org/wiki/Normal_distribution).
+
+
+```{r bean-machine, fig.show='animate', interval=.03}
+library(animation)
+ani.options(interval = 0.03, nmax = 500)
+quincunx()
+```
