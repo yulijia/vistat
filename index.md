@@ -6,7 +6,7 @@ title: About Vistat
 
 Statistical graphics are powerful -- your eyes will jump to the graph below immediately and skip this paragraph automatically. When we see a nice graph, we often wonder how it was made (e.g. [this one](http://stackoverflow.com/q/12675147/559676) via xkcd).
 
-![via xkcd](http://imgs.xkcd.com/comics/front_door.png)
+![via xkcd](http://i.imgur.com/4staRNH.png)
 
 Vistat aims to provide _working_ recipes for statistical graphics by building them from source. The website is based on Github/Jekyll, and graphs are generated dynamically through the R package [**knitr**](http://yihui.name/knitr), hence reproducibility is guaranteed, and readers can see the source code at the same time.
 
