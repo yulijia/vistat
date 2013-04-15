@@ -25,7 +25,7 @@ test `shapiro.test()` is performed to check whether the sample mean follows the 
 distribution.
 
 
-```{r central-limit-theorem, fig.show='animate', interval=.5, fig.height=8, fig.width=8}
+```{r central-limit-theorem, fig.show='animate', interval=.1, fig.height=8, fig.width=8}
 library(animation)
 ani.options(nmax = 100, interval = 0.1)
 par(mar = c(3, 3, 1, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
