@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Central Limit Theorem"
+title: "Demonstration of the Central Limit Theorem"
 author: [yulijia]
 categories: [Animation, Probability]
 tags: [Central Limit Theorem]
