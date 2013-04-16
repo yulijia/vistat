@@ -38,4 +38,15 @@ lambda=4
 f = function(n) rpois(n, lambda)
 clt.ani(FUN = f, mean = lambda, sd = lambda)
 ```
+
+## The Central Limit Theorem does not work
+
+The [Cauchy distribution](http://en.wikipedia.org/wiki/Cauchy_distribution) is an example of a
+distribution which has no mean, variance or higher moments defined. The Central Limit Theorem describes the relation of a sample mean to the population mean. So we can't apply Central Limit Theorem to the distribution.
+
+```{r cauchy-distribution-clt, fig.show='animate', interval=.2, fig.height=8, fig.width=8}
+ani.options(nmax = 100, interval = 0.1)
+par(mar = c(3, 3, 1, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
+f = function(n) rcauchy(n,location=0,scale=2)
+clt.ani(FUN = f)
 ```
