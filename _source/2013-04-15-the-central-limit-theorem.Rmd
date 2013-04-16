@@ -3,7 +3,7 @@ layout: post
 title: "Demonstration of the Central Limit Theorem"
 author: [yulijia]
 categories: [Animation, Probability]
-tags: [Central Limit Theorem]
+tags: [Central Limit Theorem, Poisson distribution, Cauchy distribution]
 reviewer: [yihui]
 animation: true
 ---
