@@ -25,10 +25,17 @@ It shows the distribution of the sample mean when the sample size $$n$$ grows up
 test `shapiro.test()` is performed to check whether the sample mean follows the normal
 distribution.
 
+## Classical Central Limit Theorem
 
-```{r central-limit-theorem, fig.show='animate', interval=.1, fig.height=8, fig.width=8}
+With the parameter `FUN` in the function `clt.ani()` you can select distribution which will be
+shown in the animation. Here is the example with [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution).
+
+```{r poisson-distribution-clt, fig.show='animate', interval=.2, fig.height=8, fig.width=8}
 library(animation)
 ani.options(nmax = 100, interval = 0.1)
 par(mar = c(3, 3, 1, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
-clt.ani(type = "h")
+lambda=4
+f = function(n) rpois(n, lambda)
+clt.ani(FUN = f, mean = lambda, sd = lambda)
+```
 ```
