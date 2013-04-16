@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Buffon's needle"
+author: []
+categories: []
+tags: []
+reviewer: []
+---
+{% include JB/setup %}
