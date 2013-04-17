@@ -1,0 +1,52 @@
+---
+layout: post
+title: "Demonstration of the Central Limit Theorem"
+author: [yulijia]
+categories: [Animation, Probability]
+tags: [Central Limit Theorem, Poisson distribution, Cauchy distribution]
+reviewer: [yihui]
+animation: true
+---
+{% include JB/setup %}
+
+In [Probability Theory](http://en.wikipedia.org/wiki/Probability_theory), the [Central Limit
+Theorem (CLT)](http://en.wikipedia.org/wiki/Central_limit_theorem) states that, given certain
+conditions, the mean of a sufficiently large number of independent random variables, each with a
+well-defined mean and well-defined variance, will be approximately normally distributed.
+
+As is shown in [The Bean Machine and the Central Limit
+Theorem](http://vis.supstat.com/2013/04/bean-machine/), the central limit theorem has a number of
+variants. This article shows you as long as the conditions of the Central Limit Theorem (CLT) are
+satisfied, the distribution of the sample mean will be approximate to the Normal distribution when
+the sample size n is large enough, no matter what is the original distribution.
+
+In the [**animation** package](http://yihui.name/animation), there is a function named `clt.ani()`.
+It shows the distribution of the sample mean when the sample size $$n$$ grows up. The normality
+test `shapiro.test()` is performed to check whether the sample mean follows the normal
+distribution.
+
+## Classical Central Limit Theorem
+
+With the parameter `FUN` in the function `clt.ani()` you can select distribution which will be
+shown in the animation. Here is the example with [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution).
+
+```{r poisson-distribution-clt, fig.show='animate', interval=.2, fig.height=8, fig.width=8}
+library(animation)
+ani.options(nmax = 100, interval = 0.1)
+par(mar = c(3, 3, 1, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
+lambda=4
+f = function(n) rpois(n, lambda)
+clt.ani(FUN = f, mean = lambda, sd = lambda)
+```
+
+## The Central Limit Theorem does not work
+
+The [Cauchy distribution](http://en.wikipedia.org/wiki/Cauchy_distribution) is an example of a
+distribution which has no mean, variance or higher moments defined. The Central Limit Theorem describes the relation of a sample mean to the population mean. So we can't apply Central Limit Theorem to the distribution.
+
+```{r cauchy-distribution-clt, fig.show='animate', interval=.2, fig.height=8, fig.width=8}
+ani.options(nmax = 100, interval = 0.1)
+par(mar = c(3, 3, 1, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
+f = function(n) rcauchy(n,location=0,scale=2)
+clt.ani(FUN = f)
+```
