@@ -20,7 +20,7 @@ The solution, in the case where the needle length is not greater than the width 
 be used to design a [Monte Carlo method](http://en.wikipedia.org/wiki/Monte_Carlo_method) for
 approximating the number $$\pi$$.
 
-In the [**animation** package](http://yihui.name/animation), functions `buffon.needle()` can be
+In the [**animation** package](http://yihui.name/animation), the function `buffon.needle()` can be
 used to produce simulation of Buffon's needle. There are three graphs made in each step: the top
 one is a simulation of the scenario, the bottom-left one can help us understand the connection
 between dropping needles and the mathematical method to estimate $$\pi$$, and the bottom-right one
