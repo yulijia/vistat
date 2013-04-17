@@ -30,7 +30,7 @@ distribution.
 With the parameter `FUN` in the function `clt.ani()` you can select distribution which will be
 shown in the animation. Here is the example with [Poisson distribution](http://en.wikipedia.org/wiki/Poisson_distribution).
 
-```{r poisson-distribution-clt, fig.show='animate', interval=.2, fig.height=8, fig.width=8}
+```{r poisson-clt, fig.show='animate', interval=.5, fig.height=8, fig.width=6}
 library(animation)
 ani.options(nmax = 100, interval = 0.1)
 par(mar = c(3, 3, 1, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
@@ -44,7 +44,7 @@ clt.ani(FUN = f, mean = lambda, sd = lambda)
 The [Cauchy distribution](http://en.wikipedia.org/wiki/Cauchy_distribution) is an example of a
 distribution which has no mean, variance or higher moments defined. The Central Limit Theorem describes the relation of a sample mean to the population mean. So we can't apply Central Limit Theorem to the distribution.
 
-```{r cauchy-distribution-clt, fig.show='animate', interval=.2, fig.height=8, fig.width=8}
+```{r cauchy-clt, fig.show='animate', interval=.5, fig.height=8, fig.width=6}
 ani.options(nmax = 100, interval = 0.1)
 par(mar = c(3, 3, 1, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
 f = function(n) rcauchy(n,location=0,scale=2)
