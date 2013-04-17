@@ -18,7 +18,7 @@ length of the needle.
 
 The solution, in the case where the needle length is not greater than the width of the strips, can
 be used to design a [Monte Carlo method](http://en.wikipedia.org/wiki/Monte_Carlo_method) for
-approximating the number [$$\pi$$](http://en.wikipedia.org/wiki/Pi).
+approximating the number $$\pi$$.
 
 In the [**animation** package](http://yihui.name/animation), functions `buffon.needle()` can be
 used to produce simulation of Buffon's needle. There are three graphs made in each step: the top
