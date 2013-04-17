@@ -48,5 +48,5 @@ distribution which has no mean, variance or higher moments defined. The Central 
 ani.options(interval = 0.5)
 par(mar = c(3, 3, 1, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
 f = function(n) rcauchy(n,location=0,scale=2)
-clt.ani(FUN = f)
+clt.ani(FUN = f, mean=NA, sd=NA)
 ```
