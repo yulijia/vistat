@@ -3,7 +3,7 @@ layout: post
 title: "Buffon's needle"
 author: [yulijia]
 categories: [Animation, Probability]
-tags: [Buffon's needle, Monte Carlo method, Pi]
+tags: [Buffon's needle, Monte Carlo, Pi]
 reviewer: [yihui]
 animation: true
 ---
