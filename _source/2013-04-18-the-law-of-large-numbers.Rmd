@@ -31,11 +31,4 @@ lln.ani(FUN = function(n, mu) rchisq(n, df = mu), mu = 5, cex=0.6)
 
 As shown in the [Central Limit Theorem](/2013/04/central-limit-theorem/),the [Cauchy
 distribution](http://en.wikipedia.org/wiki/Cauchy_distribution) has no mean, variance or higher
-moments defined, so we cannot apply LLN to this distribution.
-
-```{r cauchy-lln, fig.show='animate', interval=0.1}
-library(animation)
-ani.options(interval = 0.1, nmax = 100)
-par(mar = c(3, 3, 2, 1.5), mgp = c(1.5, 0.5, 0))
-lln.ani(FUN = function(n, mu) rcauchy(n,location=0,scale=2), mu = NA, cex=0.6)
-```
+moments defined, so we cannot apply animation function `lln.ani()` to this distribution.
