@@ -1,5 +1,11 @@
 ---
 layout: post
+title: "Demonstration of the Law of Large Numbers"
+author: [yulijia]
+categories: [Animation, Probability]
+tags: [Law of large numbers, Chi-squared distribution, Cauchy distribution]
+reviewer: [yihui]
+animation: true
 title: "The Law of Large Numbers"
 author: []
 categories: []
