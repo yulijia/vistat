@@ -18,7 +18,7 @@ expected value, and will tend to become closer as more trials are performed.
 
 The function `lln.ani()` in the [**animation** package](http://yihui.name/animation) provides us a
 visualization method for the LLN. It plots the sample mean as the sample size grows to check
-whether the sample mean approaches to the population mean.
+whether the sample mean approaches to the population mean. Here is the [Chi-squared distribution](http://en.wikipedia.org/wiki/Chi-squared_distribution) example.
 
 ```{r chi-squared-lln, fig.show='animate', interval=0.1}
 library(animation)
