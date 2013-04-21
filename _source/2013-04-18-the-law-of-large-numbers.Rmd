@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Demonstration of the Law of Large Numbers"
+author: [yulijia]
+categories: [Animation, Probability]
+tags: [Law of large numbers, Chi-squared distribution, Cauchy distribution]
+reviewer: [yihui]
+animation: true
+---
+{% include JB/setup %}
+
+## The Law of Large Numbers
+
+The [law of large numbers (LLN)](http://en.wikipedia.org/wiki/Law_of_large_numbers) is a theorem
+that describes the result of performing the same experiment a large number of times. According to
+the law, the average of the results obtained from a large number of trials should be close to the
+expected value, and will tend to become closer as more trials are performed.
+
+The function `lln.ani()` in the [**animation** package](http://yihui.name/animation) provides us a
+visualization method for the LLN. It plots the sample mean as the sample size grows to check
+whether the sample mean approaches to the population mean. Here we draw the LLN animation with the [Chi-squared distribution](http://en.wikipedia.org/wiki/Chi-squared_distribution).
+
+```{r chi-squared-lln, fig.show='animate', interval=0.1}
+library(animation)
+ani.options(interval = 0.1, nmax = 100)
+par(mar = c(3, 3, 2, 1.5), mgp = c(1.5, 0.5, 0))
+lln.ani(FUN = function(n, mu) rchisq(n, df = mu), mu = 5, cex=0.6)
+```
+
+## When LLN does not work
+
+As shown in the [Central Limit Theorem](/2013/04/central-limit-theorem/),the [Cauchy
+distribution](http://en.wikipedia.org/wiki/Cauchy_distribution) has no mean, variance or higher
+moments defined, so we cannot apply animation function `lln.ani()` to this distribution.
