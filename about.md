@@ -27,7 +27,7 @@ You can write math in the LaTeX syntax, e.g. `$$\alpha+\beta$$` in a paragraph r
 
 $$f(x)=\frac{1}{\sqrt{2\pi}}e^{-x^2/2}$$
 
-If you want to generate animations, set `animation: true` in the preamble of the article and use the chunk option `fig.show='animate'` in the chunk header ([example](https://github.com/supstat/vistat/blob/gh-pages/_source/2012-11-06-brownian-motion-with-r.Rmd)). Similarly, `d3: true` will load D3 in the page ([example](https://github.com/supstat/vistat/blob/gh-pages/_source/2012-11-07-contour-plots-with-d3-and-r.Rmd)).
+If you want to generate animations, set `animation: true` in the preamble of the article and use the chunk option `fig.show='animate'` in the chunk header ([example](https://github.com/supstat/vistat/blob/gh-pages/_source/2012-11-06-brownian-motion-with-r.Rmd)).
 
 ## Compilation
 

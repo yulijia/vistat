@@ -163,6 +163,9 @@ var data = [{
 
 Now we are ready to call D3 to draw all the lines (see the HTML source code of this page):
 
+<script src="http://d3js.org/d3.v2.min.js">
+</script>
+
 <div id="volcano" style="text-align: center;"></div>
 
 <script type="text/javascript">
