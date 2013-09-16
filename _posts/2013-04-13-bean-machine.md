@@ -35,7 +35,7 @@ quincunx()
 <script type="text/javascript">
   (function($) {
     $(document).ready(function() {
-      var imgs = Array(212);
+      var imgs = Array(213);
       for (i=0; ; i++) {
         if (i == imgs.length) break;
         imgs[i] = "http://isu.r-forge.r-project.org/vistat/2013-04-13-bean-machine/bean-machine" + (i + 1) + ".png";

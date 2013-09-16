@@ -71,7 +71,7 @@ vi.lilac.chaser()
 <script type="text/javascript">
   (function($) {
     $(document).ready(function() {
-      var imgs = Array(15);
+      var imgs = Array(16);
       for (i=0; ; i++) {
         if (i == imgs.length) break;
         imgs[i] = "http://isu.r-forge.r-project.org/vistat/2013-03-26-make-visual-illusions-in-r/lilac-chaser" + (i + 1) + ".png";
