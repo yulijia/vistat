@@ -79,17 +79,17 @@ print(sessionInfo(), locale = FALSE)
 
 
 {% highlight text %}
-## R version 2.15.2 (2012-10-26)
+## R version 3.0.1 (2013-05-16)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  base     
 ## 
 ## other attached packages:
-## [1] Cairo_1.5-2 knitr_1.1  
+## [1] Cairo_1.5-2 knitr_1.4.9
 ## 
 ## loaded via a namespace (and not attached):
-## [1] digest_0.6.2   evaluate_0.4.3 formatR_0.7.2  stringr_0.6.2 
-## [5] tools_2.15.2
+## [1] codetools_0.2-8 digest_0.6.3    evaluate_0.4.9 
+## [4] formatR_0.9     stringr_0.6.2   tools_3.0.1
 {% endhighlight %}
 
