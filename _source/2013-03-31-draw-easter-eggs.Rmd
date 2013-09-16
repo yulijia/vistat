@@ -118,7 +118,7 @@ $$ \begin{equation} \left(
 
 Here we set $c=0.2, b=0.3$.
 
-```{r draw-3d-egg, rgl=TRUE}
+```{r draw-3d-egg, rgl=TRUE, warning=FALSE}
 meshgrid <- function(a, b) {
   list(x = outer(b * 0, a, FUN = "+"), y = outer(b, a * 0, FUN = "+"))
 }
