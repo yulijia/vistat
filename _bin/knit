@@ -21,12 +21,12 @@ render_jekyll()
 
 opts_chunk$set(
   pars = list(mar = c(4, 4, .1, .1), mgp = c(2, 1, 0), bg = 'white'),
-  cache = TRUE
+  cache = TRUE, error = FALSE  # stop on error
 )
 knit_hooks$set(pars = function(before, options, envir) {
   if (before) do.call(par, options$pars)
 }, rgl = hook_rgl, crop = hook_pdfcrop)
-opts_knit$set(animation.fun = hook_scianimator, stop_on_error = 2L)
+opts_knit$set(animation.fun = hook_scianimator)
 
 invisible(local({
   f = commandArgs(TRUE)
