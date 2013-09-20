@@ -33,7 +33,7 @@ Here is an example of Bisection Method, the continuous function is
 $$f(x)=x{^3}-7x-10$$, the interval is $$[-3,5]$$. The root on the interval is 3.184.
 
 
-```{r bisection-method, fig.show='animate', interval=.2}
+```{r bisection-method, fig.show='animate', interval=2}
 library(animation)
 ani.options(interval = 2)
 par(mar = c(4, 4.5, 2, 1.5))
