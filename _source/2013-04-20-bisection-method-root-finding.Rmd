@@ -9,11 +9,11 @@ animation: true
 ---
 {% include JB/setup %}
 
-A root is a value for which a given function equals zero. When that function is plotted on a graph,
-the roots are points where the function crosses the x-axis. We learn [Vieta's
-formulas](http://en.wikipedia.org/wiki/Vieta's_formulas) to solve the [polynomial
-equation](http://en.wikipedia.org/wiki/Polynomial#Solving_polynomial_equations) at school. But how
-does the computer to find the roots? Some scientists have implemented several numerical root-
+A root of a function is an input value that produces an output of zero. When a function is plotted,
+the roots are points where the function crosses the x-axis. Usually, we can use [Vieta's
+formulas](http://en.wikipedia.org/wiki/Vieta's_formulas) to find roots of [polynomial
+equations](http://en.wikipedia.org/wiki/Polynomial#Solving_polynomial_equations). But how
+does the computer find the roots? Some scientists have implemented several numerical root-
 finding methods to solve the problem.
 
 The numerical [root finding methods](http://en.wikipedia.org/wiki/Root-finding_algorithm) use
