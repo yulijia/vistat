@@ -11,15 +11,15 @@ animation: true
 
 A root is a value for which a given function equals zero. When that function is plotted on a graph,
 the roots are points where the function crosses the x-axis. We learn [Vieta's
-formulas](http://en.wikipedia.org/wiki/Vieta's_formulas) to solving the [polynomial
+formulas](http://en.wikipedia.org/wiki/Vieta's_formulas) to solve the [polynomial
 equation](http://en.wikipedia.org/wiki/Polynomial#Solving_polynomial_equations) at school. But how
-does the computer to find the roots? Some scientists have implemented several numerical root
+does the computer to find the roots? Some scientists have implemented several numerical root-
 finding methods to solve the problem.
 
 The numerical [root finding methods](http://en.wikipedia.org/wiki/Root-finding_algorithm) use
 iteration, producing a sequence of numbers that hopefully converge towards a limit which is a root.
 
-Next, I will apply the [**animation** package](http://yihui.name/animation)'s function
+In this article, I will apply the [**animation** package](http://yihui.name/animation)'s function
 `bisection.method()` to show you one of the numercical root-finding methods -- the [Bisection
 Method](http://en.wikipedia.org/wiki/Root-finding_algorithm#Bisection_Method).
 
@@ -29,7 +29,7 @@ says that if $$f$$ is a **continous function** on $$[a, b]$$ and the sign of $$f
 from the sign of $$f(b)$$, then there must be some point $$c$$, in the interval such that
 $$f(c)=0$$, and is thus a root of the function.
 
-Here we can see the example of Bisection Method for Root finding, the continuous function is
+Here is an example of Bisection Method, the continuous function is
 $$f(x)=x{^3}-7x-10$$, the interval is $$[-3,5]$$. The root on the interval is 3.184.
 
 
