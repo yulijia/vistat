@@ -13,7 +13,7 @@ for (i in setdiff(c(
 }
 
 # formatR indent 2 spaces; print width 65; no progress
-options(reindent.spaces = 2, KNITR_WIDTH = 65)
+options(reindent.spaces = 2, knitr.width = 65)
 
 library(knitr)
 stopifnot('_source' %in% list.files()) # run me from the root directory
