@@ -48,7 +48,7 @@ plot(x, col = rgb(0, 0, 0, 0.1))
 ![plot of chunk plot-alpha](http://isu.r-forge.r-project.org/vistat/2012-11-05-to-see-a-world-in-grains-of-sand/plot-alpha.png) 
 
 
-## Set axes limits
+## Set axis limits
 
 Zoom into the point cloud:
 

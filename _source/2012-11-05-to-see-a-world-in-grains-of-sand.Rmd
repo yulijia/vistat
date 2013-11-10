@@ -38,7 +38,7 @@ We take `alpha = 0.1` to generate semi-transparent colors.
 plot(x, col = rgb(0, 0, 0, 0.1))
 ```
 
-## Set axes limits
+## Set axis limits
 
 Zoom into the point cloud:
 
