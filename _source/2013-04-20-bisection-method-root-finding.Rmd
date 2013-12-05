@@ -12,9 +12,9 @@ animation: true
 A root of a function is an input value that produces an output of zero. When a function is plotted,
 the roots are points where the function crosses the x-axis. Usually, we can use [Vieta's
 formulas](http://en.wikipedia.org/wiki/Vieta's_formulas) to find roots of [polynomial
-equations](http://en.wikipedia.org/wiki/Polynomial#Solving_polynomial_equations). But how
-does the computer find the roots? Some scientists have implemented several numerical root-
-finding methods to solve the problem.
+equations](http://en.wikipedia.org/wiki/Polynomial#Solving_polynomial_equations) by hand (with or
+without calculator). But how does the computer find the roots? Some scientists have implemented
+several numerical root-finding methods to solve the problem.
 
 The numerical [root finding methods](http://en.wikipedia.org/wiki/Root-finding_algorithm) use
 iteration, producing a sequence of numbers that hopefully converge towards a limit which is a root.
@@ -23,14 +23,23 @@ In this article, I will apply the [**animation** package](http://yihui.name/anim
 `bisection.method()` to show you one of the numercical root-finding methods -- the [Bisection
 Method](http://en.wikipedia.org/wiki/Root-finding_algorithm#Bisection_Method).
 
+At each step the bisection method divides the interval $$[a, b]$$ in two by computing the midpoint
+$$c=\frac{a+b}{2}$$ of the interval and the value of the function $$f(c)$$ at that point. Unless
+$$f(c)=0$$ (If $$f(c)=0$$ then $$c$$ may be taken as the solution), there are two possibilities:
+either $$f(a)$$ and $$f(c)$$ have opposite signs and bracket a root, or $$f(c)$$ and $$f(b)$$ have
+opposite signs and bracket a root. The method selects the subinterval that is a bracket as a new
+interval to be used in the next step. If $$f(a)$$ and $$f(c)$$ are opposite signs, then the method
+sets $$c$$ as the new value for $$b$$, and if $$f(b)$$ and $$f(c)$$ are opposite signs then the
+method sets $$c$$ as the new $$a$$.
+
 Basically, the bisection method finding the root from both sides by making use of the [Intermediate
 Value Theorem](http://en.wikipedia.org/wiki/Intermediate_value_theorem). In essence, this theorem
 says that if $$f$$ is a **continous function** on $$[a, b]$$ and the sign of $$f(a)$$ is different
 from the sign of $$f(b)$$, then there must be some point $$c$$, in the interval such that
 $$f(c)=0$$, and is thus a root of the function.
 
-Here is an example of Bisection Method, the continuous function is
-$$f(x)=x{^3}-7x-10$$, the interval is $$[-3,5]$$. The root on the interval is 3.184.
+Here is an example of Bisection Method, the continuous function is $$f(x)=x{^3}-7x-10$$, the
+interval is $$[-3,5]$$. The root on the interval is 3.184.
 
 
 ```{r bisection-method, fig.show='animate', interval=2}
