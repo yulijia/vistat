@@ -11,21 +11,17 @@ animation: ture
 
 ## Introduction
 
-I first heard the [Montre Carlo Method](http://en.wikipedia.org/wiki/Monte_Carlo_method) is on a
+I first heard the [Monte Carlo Method](http://en.wikipedia.org/wiki/Monte_Carlo_method) is on a
 story of the nuclear weapon project. The Montre Carlo Method was invented in the late 1940s by
-Stanislaw Ulam, they were used at Los Alamos for early work relating to the development of the
+Stanislaw Ulam, it was used at Los Alamos for early work relating to the development of the
 hydrogen bomb, and became popularized in the fields of physics, physical chemistry, and operations
-research.
-
-The Montre Carlo Method used for drawing a sample at random from the empirical distribution. The
-oldest well-known example is that of the [Buffon's needle](2013-04-16-buffons-needle.Rmd), where
-supposing a needle of the same length as the width between cracks we have: $$P=\frac{2L}{D\pi}$$
-implying $$\hat{\pi}=2\frac{L}{D}P$$, the $$\frac{L}{D}$$ is a constant.
+research. The Montre Carlo Method used for drawing a sample at random from the empirical distribution. A
+well-known example is the [Buffon's needle](2013-04-16-buffons-needle.Rmd).
 
 ## What is a Monte Carlo Method?
 
-In physics and statistics many of the problems Monte Carlo is used on is under the form of the
-estimate of an integral unkown in closed form: $$\hat{\theta}=\int_0^1 f(u)du$$, which can be seen
+Monte Carlo is often applied in solving definite integral problems in the fields of physics and statistics, 
+where many problems can come down to an integral problem with the form: $$\hat{\theta}=\int_0^1 f(u)du$$, which can be seen
 as the evalutaion of $$Ef(u)$$, where $$u \sim U(0,1)$$.
 
 The **hit-or-miss** Monte Carlo method generates random points in a bounded graph and counts the
@@ -33,12 +29,11 @@ number of 'hits' or points that are in the region whose area we want to evaluate
 $$\hat{\theta}=\frac{\#hits}{\#total}$$. As shown in the [Buffon's
 needle](2013-04-16-buffons-needle.Rmd), the $$\pi$$ can be calculated by the sumilation.
 
-Here, I show one of the simulation of $$\pi$$ by function `MC.hitormiss()`in the [**animation**
-package](http://yihui.name/animation). This function can generate uniform random numbers and
+Here, I illustrate the hit-or-miss procedure to calculate $$\pi$$ by using the `MC.hitormiss()` function in the [**animation**
+package](http://yihui.name/animation). This function generate uniform random numbers and
 compute the proportion of points under the curve. Consider a circle inscribed in a unit square.
-Given that the circle and the square have a ratio of areas that is $$P=\pi/4$$, the value of
-$$\pi$$ can be approximated using a Monte Carlo method. We only need to counts the number of 'hits'
-or points that are in the circle, the $$\pi=4P$$.
+Given that the circle and the square have a ratio of areas $$P=\pi/4$$, 
+$$\pi$$ can be approximated using a Monte Carlo method. We only need to count points that are in the circle, then $$\pi=4P$$.
 
 ```{r hit-or-miss-montre-carlo, fig.show='animate', interval=.1}
 library(animation)
