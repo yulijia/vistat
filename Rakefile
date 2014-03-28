@@ -95,10 +95,12 @@ task :page do
     post.puts "{% include JB/setup %}"
   end
 end # task :page
-
-desc "Launch preview environment"
 task :preview do
-  system "jekyll --auto --server"
+  if Gem::Version.new(`jekyll -v | awk '{print $2}'`) > Gem::Version.new('1.0.0')
+    system "jekyll --watch serve"
+  else 
+    system "jekyll --auto --server"
+  end
 end # task :preview
 
 # Usage: rake knit
