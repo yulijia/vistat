@@ -20,8 +20,8 @@ tangent line (which is easily done with elementary algebra). This x-intercept wi
 better approximation to the function's root than the original guess, and the method can be
 iterated.
 
-The function `newton.method()` in the [**animation** package](http://yihui.name/animation) can give
-you a demonstration of the Newton-Raphson Method. Let's set the function
+The function `newton.method()` in the [**animation** package](http://yihui.name/animation) gives a 
+demonstration of the Newton-Raphson Method. The function used here is
 $$f(x)=5x{^2}-7x{^2}-40x+100$$, the starting point is 7.15 and the interval is $$[-6.2, 7.1]$$.
 
 ```{r newton-method-right, fig.show='animate', interval=.5}
