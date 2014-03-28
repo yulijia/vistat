@@ -26,7 +26,7 @@ $$f(x)=5x{^2}-7x{^2}-40x+100$$, the starting point is 7.15 and the interval is $
 
 ```{r newton-method-right, fig.show='animate', interval=.5}
 library(animation)
-ani.options(nmax = 100, interval = 1)
+ani.options(nmax = 100, interval = .5)
 par(mar = c(3, 3, 1, 1.5), mgp = c(1.5, 0.5, 0), pch = 19)
 newton.method(function(x) 5 * x^3 - 7 * x^2 - 40 * x + 100, init = 7.15, rg = c(-6.2, 7.1))
 ```
