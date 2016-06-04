@@ -4,7 +4,7 @@ permalink: /:year/:month/:title
 markdown: kramdown
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "cache", "figure"]
-pygments: true
+highlight: true
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -76,7 +76,7 @@ authors:
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://vis.supstat.com
+# production_url : http://vis.supstat.com
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -115,7 +115,7 @@ JB :
   #   http://s3.amazonaws.com/yoursite/themes/watermelon
   #   /assets
   #
-  ASSET_PATH : false
+  ASSET_PATH : /vistat/assets
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change theme here if needed.
